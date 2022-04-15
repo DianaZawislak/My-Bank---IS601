@@ -1,13 +1,18 @@
 """A simple flask web app"""
 import os
-from flask import Flask
+
+
+from flask import render_template, Flask
+
 from app.cli import create_database
 from app.db import db
 from app.db.models import User
 
 
+
 def page_not_found(e):
     return render_template("404.html"), 404
+
 
 def create_app():
     """Create and configure an instance of the Flask application."""
@@ -24,6 +29,9 @@ def create_app():
 
     @app.route('/')
     def hello():
-        return 'Hello, World!'
+       return 'Hello, World!'
 
     return app
+
+
+
