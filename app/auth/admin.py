@@ -59,10 +59,10 @@ def add_user():
             db.session.add(user)
             db.session.commit()
             flash('Congratulations, you just created a user', 'success')
-            return redirect(url_for('auth.browse_users'))
+            return redirect(url_for('admin.browse_users'))
         else:
             flash('Already Registered')
-            return redirect(url_for('auth.browse_users'))
+            return redirect(url_for('admin.browse_users'))
     return render_template('user_new.html', form=form)
 
 
@@ -72,8 +72,8 @@ def delete_user(user_id):
     user = User.query.get(user_id)
     if user.id == current_user.id:
         flash("You can't delete yourself!")
-        return redirect(url_for('auth.browse_users'), 302)
+        return redirect(url_for('admin.browse_users'), 302)
     db.session.delete(user)
     db.session.commit()
     flash('User Deleted', 'success')
-    return redirect(url_for('auth.browse_users'), 302)
+    return redirect(url_for('admin.browse_users'), 302)
