@@ -42,7 +42,7 @@
                         {% if current_user.is_authenticated %}
                             {{ render_nav_item('auth.dashboard','Dashboard' ) }}
                             {% if current_user.is_admin %}
-                                {{ render_nav_item('auth.browse_users','User Management' ) }}
+                                {{ render_nav_item('admin.browse_users','User Management' ) }}
                             {% endif %}
 
                         {% else %}
