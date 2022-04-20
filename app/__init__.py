@@ -4,6 +4,7 @@ import os
 
 from flask import render_template, Flask
 
+from app.cli import create_log_folder
 from app.cli import create_database
 from app.db import db
 from app.db.models import User
