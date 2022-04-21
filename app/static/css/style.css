@@ -13,10 +13,18 @@ font-size: 100%;
 /*------------------------------ Navbar Custom -------------------------------*/
 .navbar-default {
     background-image: linear-gradient(#585858, #909090); !important;
+
 }
 .navbar-default .navbar-nav > li > a {
-    color: silver !important;
+    color: black !important;
+    font-size: large;
 }
+
+.nav-item {
+    color: black !important;
+    font-size: large;
+}
+
 .navbar-default .navbar-nav > li > a:hover {
     color: blue !important;
 }
@@ -58,4 +66,10 @@ a {
     border-style: outset;
     border-color: dimgrey;
     border-width: 5px;
+}
+
+.px10 {
+    margin-top: -10px;
+    margin-bottom: -10px;
+
 }

@@ -26,7 +26,12 @@
             {% from 'bootstrap5/utils.html' import render_messages %}
             {% from 'bootstrap5/form.html' import render_form, render_field, render_form_row %}
 
-            <nav class="outset navbar  navbar-default navbar-light navbar-expand-lg px-2">
+            <nav class="outset navbar  navbar-default navbar-light navbar-expand-lg py-0">
+                <div class="navbar-brand hidden-s px10" style="color: darkgrey">
+                <a href="{{ url_for('simple_pages.index') }}">
+              <img src="/static/images/logo.png" alt="" width="220" height="100"></a>
+
+            </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -51,7 +56,7 @@
                 <div class="navbar-nav d-flex">
                     {% if current_user.is_authenticated %}
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                            <a class="fs-20 nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
                                data-bs-toggle="dropdown" aria-expanded="false">
                                 My Account
                             </a>
@@ -81,8 +86,26 @@
 </div>
 
 {% block scripts %}
+
+
     <!-- Optional JavaScript -->
     {{ bootstrap.load_js() }}
+
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+
+<script>
+    $(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') === window.location.href) {
+                $(this).addClass('active'); $(this).parents('li').addClass('active');
+            }
+        });
+    });
+</script>
 {% endblock %}
 <footer class="text-center mt-5">
    &copy; Copyright Diana Zawislak {{ year }}
