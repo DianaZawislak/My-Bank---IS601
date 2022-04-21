@@ -1,0 +1,9 @@
+2022-04-20 22:16:06,676 [INFO] myerrors: This has broken
+2022-04-20 22:16:06,678 [DEBUG] myerrors: Debug Logger
+2022-04-20 22:16:06,681 [WARNING] myerrors: warning
+2022-04-20 22:27:01,422 [INFO] myerrors: This has broken
+2022-04-20 22:27:01,423 [DEBUG] myerrors: Debug Logger
+2022-04-20 22:27:01,425 [WARNING] myerrors: warning
+2022-04-20 23:55:34,742 [INFO] myerrors: This has broken
+2022-04-20 23:55:34,743 [DEBUG] myerrors: Debug Logger
+2022-04-20 23:55:34,746 [WARNING] myerrors: warning
