@@ -27,8 +27,8 @@ Below you can find links to live application both production and development. Pr
 
 [![Production Workflow 1](https://github.com/DianaZawislak/My-Bank---IS601/actions/workflows/prod.yml/badge.svg)](https://github.com/DianaZawislak/My-Bank---IS601/actions/workflows/prod.yml)
 
-* [Production Deployment](https://mybank-prod.herokuapp.com/)
+* [Production Deployment](https://mybank-prod.herokuapp.com)
 
 [![Development Workflow 3.8](https://github.com/DianaZawislak/My-Bank---IS601/actions/workflows/dev.yml/badge.svg)](https://github.com/DianaZawislak/My-Bank---IS601/actions/workflows/dev.yml)
 
-* [Developmental Deployment](https://mybank-dev.herokuapp.com/)
+* [Developmental Deployment](https://mybank-dev.herokuapp.com)
