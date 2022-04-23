@@ -21,7 +21,7 @@ This application allows us to convert financial transactions CSV to be uploaded 
 I used a blueprint of simple pages to be able to carry nav bar and other applicable things through every page without having to reenter code.
 Everything is constantly tested with pytest and deployment is stopped if test shall not pass. 
 
-Below you can find links to live application both production and development. Production is always up and running where developmnet is used for testing new additions.
+Below you can find links to live application both production and development. Production is always up and running where development is used for testing new additions.
 
 # Deployment Status & Links To Production and Development
 
