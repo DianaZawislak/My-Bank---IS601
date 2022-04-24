@@ -98,6 +98,6 @@ def edit_account():
         return redirect(url_for('auth.dashboard'))
     return render_template('manage_account.html', form=form)
 
-@auth.route('/index')
+@auth.route('/home')
 def index():
     return render_template('index.html')
