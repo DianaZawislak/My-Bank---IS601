@@ -79,20 +79,19 @@ a {
     font-size: 12px;
 }
 
-/*.greyfont {
-    color: #303030;
-    background-color:rgb(160,160,160,0.7);
-}  */
+.greyfont {
+    color: #909090;
+}
 
 
 /*---------------------carousel custom-----------------*/
 .carousel-caption {
     left: auto;
+
 }
 
 .p1 {
-    font-size: 40px;
     text-align: center;
-    color: #303030;
-    background-color:rgb(160,160,160,0.7);
+    color: #989898;
+
 }
