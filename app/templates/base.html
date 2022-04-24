@@ -1,8 +1,7 @@
 <!doctype html>
 <html lang="en">
-<head>
-
-    <!-- Required meta tags -->
+    <head>
+        <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,101 +13,83 @@
         <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
         <title>{% block title %}{% endblock %}Diana's {{ name }} Bank</title>
     {% endblock %}
-
-</head>
-
-<body>
-<div class="container">
-
-    <div class="row">
-        <header class="mb-2">
-            {% from 'bootstrap5/nav.html' import render_nav_item %}
-            {% from 'bootstrap5/utils.html' import render_messages %}
-            {% from 'bootstrap5/form.html' import render_form, render_field, render_form_row %}
-
-            <nav class="outset navbar  navbar-default navbar-light navbar-expand-lg py-0">
-                <div class="navbar-brand hidden-s px-0" style="color: darkgrey">
-                <a href="{{ url_for('simple_pages.index') }}">
-              <img src="/static/images/logo.png" alt="" width="220" height="100"></a>
-
-            </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <div class="navbar-nav mr-auto">
-                        {% if current_user.is_authenticated %}
-                            {{ render_nav_item('auth.dashboard','Dashboard' ) }}
-                            {% if current_user.is_admin %}
-                                {{ render_nav_item('admin.browse_users','User Management' ) }}
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <header>
+                    {% from 'bootstrap5/nav.html' import render_nav_item %}
+                    {% from 'bootstrap5/utils.html' import render_messages %}
+                    {% from 'bootstrap5/form.html' import render_form, render_field, render_form_row %}
+                    <nav class="outset navbar navbar-default navbar-expand-lg navbar-light px-2">
+                        <a class="navbar-brand ml-5">
+                            <img src="{{ url_for('static', filename='images/logo.png') }}" height="70" width="160" alt="" >
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <div class="navbar-nav mr-auto">
+                                {{ render_nav_item('simple_pages.index', 'Home') }}
+                                {% if current_user.is_authenticated %}
+                                    {{ render_nav_item('auth.dashboard','Dashboard' ) }}
+                                    {% if current_user.is_admin %}
+                                        {{ render_nav_item('admin.browse_users','User Management' ) }}
+                                    {% endif %}
+                                {% endif %}
+                                {{ render_nav_item('simple_pages.about','About') }}
+                            </div>
+                        </div>
+                        <div class="navbar-nav d-flex">
+                            {% if current_user.is_authenticated %}
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                        My Account
+                                    </a>
+                                    <ul class="dropdown-menu " aria-labelledby="navbarDarkDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="{{ url_for("auth.edit_profile") }}">Manage Profile</a></li>
+                                        <li><a class="dropdown-item" href="{{ url_for("auth.edit_account") }}">Manage Account</a></li>
+                                        <li><a class="dropdown-item" href="{{ url_for("auth.logout") }}">Logout</a></li>
+                                    </ul>
+                                </li>
+                            {% else %}
+                                {{ render_nav_item('auth.login','Login' ) }}
                             {% endif %}
+                        </div>
+                    </nav>
+                </header>
+            </div>
+            <div class="row">
+                {{ render_messages() }}
+            </div>
+            <div class="row mt-5">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
 
-                        {% else %}
-                            {{ render_nav_item('simple_pages.index', 'Home') }}
-                        {% endif %}
-
-                        {{ render_nav_item('simple_pages.about','About') }}
-                        {{ render_nav_item('simple_pages.welcome','Welcome') }}
-                    </div>
-                </div>
-                <div class="navbar-nav d-flex">
-                    {% if current_user.is_authenticated %}
-                        <li class="nav-item dropdown">
-                            <a class="fs-20 nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">
-                                My Account
-                            </a>
-                            <ul class="dropdown-menu " aria-labelledby="navbarDarkDropdownMenuLink">
-                                <li><a class="dropdown-item" href="{{ url_for("auth.edit_profile") }}">Manage Profile</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for("auth.edit_account") }}">Manage Account</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for("auth.logout") }}">Logout</a></li>
-                            </ul>
-                        </li>
-                    {% else %}
-                        {{ render_nav_item('auth.register','Register' ) }}
-                        {{ render_nav_item('auth.login','Login' ) }}
-                    {% endif %}
-                </div>
-            </nav>
-        </header>
-    </div>
-    <!-- Your page content -->
-    <div class="row">
-        {{ render_messages() }}
-    </div>
-    <div class="row mt-5">
-
-        {% block content %}
-        {% endblock %}
-    </div>
-</div>
-
-{% block scripts %}
-
-
-    <!-- Optional JavaScript -->
+    {% block scripts %}
+    <!--- Optional JavaScript -->
     {{ bootstrap.load_js() }}
-
-
-    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
-
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-
-
+<script src="//code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script>
-    $(function(){
-        $('a').each(function(){
-            if ($(this).prop('href') === window.location.href) {
-                $(this).addClass('active'); $(this).parents('li').addClass('active');
-            }
+        $(function () {
+            $('a').each(function () {
+                if ($(this).prop('href') === window.location.href) {
+                    $(this).addClass('active');
+                    $(this).parents('li').addClass('active');
+                }
+            });
         });
-    });
-</script>
+    </script>
 {% endblock %}
-<footer class="text-center mt-5">
-   &copy; Copyright Diana Zawislak {{ year }}
-</footer>
-</body>
+
+
+        <footer class="text-center">
+            <p>&#169; Copyright: {{ year }} Diana Zawislak &middot; <a href="mailto:diana.zawislak@icloud.com">Contact</a></p>
+        </footer>
+    </body>
 </html>
