@@ -21,7 +21,7 @@ def before_request_logging():
 
 @log_con.after_app_request
 def after_request_logging(response):
-    if request.path == '/favicon.ico':
+    if request.path == '/logo.png':
         return response
     elif request.path.startswith('/static'):
         return response
