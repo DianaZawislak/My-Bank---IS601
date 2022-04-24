@@ -82,6 +82,13 @@ a {
 .greyfont {
     color: #909090;
 }
+.whitefont {
+    color: #f2f3f4;
+}
+
+.darkfont {
+    color: darkslategray;
+}
 
 
 /*---------------------carousel custom-----------------*/

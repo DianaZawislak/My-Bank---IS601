@@ -1,16 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
-<main>
+    <main>
         <div id="myCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="surf"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                        aria-label="surf"></button>
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="4x4"></button>
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="family"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{{ url_for('static', filename='images/bank3.jpg') }}">
+                    <img src="{{ url_for('static', filename='images/bank4.jpg') }}">
                     <div class="container">
+                        <div class="carousel-caption text-start">
+                            <h1 class="text-light">Savings made easy. <br>Financial Freedom.</h1>
+                            <p class="text-light pb-3">
+                                Let us help you and your family become financially independent
+                            </p>
+                        </div>
 
                     </div>
                 </div>
@@ -19,23 +26,24 @@
                     <img src="{{ url_for('static', filename='images/bank1.jpg') }}">
                     <div class="container">
                         <div class="carousel-caption text-start">
-                            <h1 class="greyfont">Mitigate Risk. Maximize Rewards</h1>
-                            <p class="greyfont pb-3">
-                                Investing can be risk-laden, but with the right experience <br>
-                                and skill, it can be exhilarating. Let Bank of Ethan show <br>
-                                you our full suite of capabilities.
+                            <h1 class="text-light">Simpler. <span class="greyfont">Faster. F</span>riendlier</h1>
+                            <p class="text-light pb-3">
+                                Let us help you make and manage investments that will make you grow.<br>
+                                Where you know your banker and your banker knows you.
                             </p>
                         </div>
                     </div>
                 </div>
 
                 <div class="carousel-item 100%">
-                        <img src="{{ url_for('static', filename='images/bank2.jpg') }}">
+                    <img src="{{ url_for('static', filename='images/bank2.jpg') }}">
                     <div class="container">
                         <div class="carousel-caption text-start">
-                            <h1 class="text-light">Your Financial Freedom <br>is Never Just Yours.</h1>
-                            <p class="text-light">Let us help you build the freedom you've always <br>
-                                wanted for yourself... and for your family.
+                            <h1 class="text-light">Easiest Checking. <br>Easiest Banking.</h1>
+                            <p class="text-light">No monthly maintenance fee.
+                                No minimum balance requirement. <br>Available nationwide.
+                                Physical branch locations and online accessibility<br>
+                                Large ATM network.
                             </p>
                         </div>
                     </div>
@@ -61,13 +69,13 @@
                 </div>
                 <div class="col-md-5">
                     <img src="{{ url_for('static', filename='images/') }}"
-                     class="img-fluid  mb-4" alt="Team" width="375" height="150"
-                     loading="lazy">
+                         class="img-fluid  mb-4" alt="Team" width="375" height="150"
+                         loading="lazy">
                 </div>
             </div>
             <hr class="featurette-divider">
         </div>
-                    <div class="container col-xxl-8">
+        <div class="container col-xxl-8">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
                 <div class="col-10 col-sm-8 col-lg-5">
                     <img src="{{ url_for('static', filename='images/') }}"
@@ -82,9 +90,9 @@
                 </div>
             </div>
         </div>
-    <div class="container">
-        <hr class="featurette-divider">
-    </div>
+        <div class="container">
+            <hr class="featurette-divider">
+        </div>
 
     </main>
 
