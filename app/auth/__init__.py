@@ -1,11 +1,12 @@
 from flask import Blueprint, render_template, redirect, url_for, flash,current_app
 from flask_login import login_user, login_required, logout_user, current_user
+from markupsafe import Markup
 from werkzeug.security import generate_password_hash
 
-from app.auth.decorators import admin_required
-from app.auth.forms import login_form, register_form, profile_form, security_form, user_edit_form
-from app.db import db
-from app.db.models import User
+from .decorators import admin_required
+from .forms import login_form, register_form, profile_form, security_form, user_edit_form
+from ..db import db
+from ..db.models import User
 
 auth = Blueprint('auth', __name__, template_folder='templates')
 
@@ -25,11 +26,12 @@ def register():
                 user.is_admin = 1
                 db.session.add(user)
                 db.session.commit()
-            flash('Congratulations, you are now a registered user!', "success")
-            return redirect(url_for('auth.login'), 302)
+            flash('Congratulations !!! You are successfully registered, please log in', 'success')
+           # flash('Congratulations, you are now a registered user, please', <a href="{{ url_for('auth.login', page="login_form")}}">log in</a>., "success")
+            return redirect(url_for('auth.register'), 302)
         else:
             flash('Already Registered')
-            return redirect(url_for('auth.login'), 302)
+            return redirect(url_for('auth.register'), 302)
     return render_template('register.html', form=form)
 
 @auth.route('/login', methods=['POST', 'GET'])
@@ -41,7 +43,7 @@ def login():
         user = User.query.filter_by(email=form.email.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
-            return redirect(url_for('auth.login'))
+            return redirect(url_for('auth.register'))
         else:
             user.authenticated = True
             db.session.add(user)
@@ -49,7 +51,7 @@ def login():
             login_user(user)
             flash("Welcome", 'success')
             return redirect(url_for('auth.dashboard'))
-    return render_template('login_base.html', form=form)
+    return render_template('login.html', form=form)
 
 @auth.route("/logout")
 @login_required
