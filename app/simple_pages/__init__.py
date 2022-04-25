@@ -37,6 +37,3 @@ def index():
             return render_template('index.html')
     return render_template('login.html')
 
-@simple_pages.route('/show_log')
-def show_log():
-    return render_template("general.log")

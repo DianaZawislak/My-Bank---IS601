@@ -154,3 +154,19 @@
 [2022-04-24 00:32:50,213] [285] 192.168.48.1 requested http://localhost/loginDEBUG in __init__: Debug Logger
 [2022-04-24 00:32:50,213] [285] 192.168.48.1 requested http://localhost/loginWARNING in __init__: WARNING
 [2022-04-24 00:32:50,214] [285] 192.168.48.1 requested http://localhost/loginCRITICAL in __init__: CRITICAL
+[2022-04-24 02:58:31,133] [523] 192.168.48.1 requested http://localhost/usersINFO in __init__: Request Logger
+[2022-04-24 02:58:31,133] [523] 192.168.48.1 requested http://localhost/usersDEBUG in __init__: Debug Logger
+[2022-04-24 02:58:31,133] [523] 192.168.48.1 requested http://localhost/usersWARNING in __init__: WARNING
+[2022-04-24 02:58:31,134] [523] 192.168.48.1 requested http://localhost/usersCRITICAL in __init__: CRITICAL
+[2022-04-24 03:45:27,701] [687] 192.168.48.1 requested http://localhost/?page=IndexINFO in __init__: Request Logger
+[2022-04-24 03:45:27,701] [687] 192.168.48.1 requested http://localhost/?page=IndexDEBUG in __init__: Debug Logger
+[2022-04-24 03:45:27,701] [687] 192.168.48.1 requested http://localhost/?page=IndexWARNING in __init__: WARNING
+[2022-04-24 03:45:27,701] [687] 192.168.48.1 requested http://localhost/?page=IndexCRITICAL in __init__: CRITICAL
+[2022-04-24 03:49:15,510] [711] 192.168.48.1 requested http://localhost/?page=IndexINFO in __init__: Request Logger
+[2022-04-24 03:49:15,510] [711] 192.168.48.1 requested http://localhost/?page=IndexDEBUG in __init__: Debug Logger
+[2022-04-24 03:49:15,511] [711] 192.168.48.1 requested http://localhost/?page=IndexWARNING in __init__: WARNING
+[2022-04-24 03:49:15,511] [711] 192.168.48.1 requested http://localhost/?page=IndexCRITICAL in __init__: CRITICAL
+[2022-04-24 03:51:30,841] [728] 192.168.48.1 requested http://localhost/index?page=IndexINFO in __init__: Request Logger
+[2022-04-24 03:51:30,841] [728] 192.168.48.1 requested http://localhost/index?page=IndexDEBUG in __init__: Debug Logger
+[2022-04-24 03:51:30,841] [728] 192.168.48.1 requested http://localhost/index?page=IndexWARNING in __init__: WARNING
+[2022-04-24 03:51:30,842] [728] 192.168.48.1 requested http://localhost/index?page=IndexCRITICAL in __init__: CRITICAL

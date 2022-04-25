@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block content %}
+    <main>
+        <div id="myCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                        aria-label="surf"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="4x4"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="family"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ url_for('static', filename='images/bank4.jpg') }}">
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                            <h1 class="text-light">Savings made easy. <br>Financial Freedom.</h1>
+                            <p class="text-light pb-3">
+                                Let us help you and your family become financially independent
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="{{ url_for('static', filename='images/bank1.jpg') }}">
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                            <h1 class="text-light">Simpler. <span class="greyfont">Faster. F</span>riendlier</h1>
+                            <p class="text-light pb-3">
+                                Let us help you make and manage investments that will make you grow.<br>
+                                Where you know your banker and your banker knows you.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item 100%">
+                    <img src="{{ url_for('static', filename='images/bank2.jpg') }}">
+                    <div class="container">
+                        <div class="carousel-caption text-start">
+                            <h1 class="text-light">Easiest Checking. <br>Easiest Banking.</h1>
+                            <p class="text-light">No monthly maintenance fee.
+                                No minimum balance requirement. <br>Available nationwide.
+                                Physical branch locations and online accessibility<br>
+                                Large ATM network.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="container col-xxl-8">
+            <div class="row featurette  d-flex align-items-center">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="fw-bold lh-1 mb-3">Project Outline</h2>
+                    <p class="lead">
+
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img src="{{ url_for('static', filename='images/') }}"
+                         class="img-fluid  mb-4" alt="Team" width="375" height="150"
+                         loading="lazy">
+                </div>
+            </div>
+            <hr class="featurette-divider">
+        </div>
+        <div class="container col-xxl-8">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-5">
+                    <img src="{{ url_for('static', filename='images/') }}"
+                         class="d-block mx-lg-auto img-fluid" alt=""
+                         width="300" height="300" loading="lazy">
+                </div>
+                <div class="col-lg-7">
+                    <h2 class="fw-bold lh-1 mb-3">about me</h2>
+                    <p class="lead">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <hr class="featurette-divider">
+        </div>
+
+    </main>
+
+{% endblock %}
+
