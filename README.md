@@ -1,5 +1,16 @@
 # Diana's Bank (DZ bank) Web Application
 
+# Deployment Status & Links To Production and Development
+
+[![Production Workflow 1](https://github.com/DianaZawislak/My-Bank---IS601/actions/workflows/prod.yml/badge.svg)](https://github.com/DianaZawislak/My-Bank---IS601/actions/workflows/prod.yml)
+
+* [Production Deployment](https://mybank-prod.herokuapp.com)
+
+[![Development Workflow 3.8](https://github.com/DianaZawislak/My-Bank---IS601/actions/workflows/dev.yml/badge.svg)](https://github.com/DianaZawislak/My-Bank---IS601/actions/workflows/dev.yml)
+
+* [Developmental Deployment](https://mybank-dev.herokuapp.com)
+
+
 ![Last Commit](https://img.shields.io/github/last-commit/DianaZawislak/My-Bank---IS601?style=plastic)
 ![Pull Requests](https://img.shields.io/github/issues-pr/DianaZawislak/My-Bank---IS601?style=plastic)
 ![Contributors](https://img.shields.io/github/contributors/DianaZawislak/My-Bank---IS601?style=plastic)
@@ -23,12 +34,3 @@ Everything is constantly tested with pytest and deployment is stopped if test sh
 
 Below you can find links to live application both production and development. Production is always up and running where development is used for testing new additions.
 
-# Deployment Status & Links To Production and Development
-
-[![Production Workflow 1](https://github.com/DianaZawislak/My-Bank---IS601/actions/workflows/prod.yml/badge.svg)](https://github.com/DianaZawislak/My-Bank---IS601/actions/workflows/prod.yml)
-
-* [Production Deployment](https://mybank-prod.herokuapp.com)
-
-[![Development Workflow 3.8](https://github.com/DianaZawislak/My-Bank---IS601/actions/workflows/dev.yml/badge.svg)](https://github.com/DianaZawislak/My-Bank---IS601/actions/workflows/dev.yml)
-
-* [Developmental Deployment](https://mybank-dev.herokuapp.com)
