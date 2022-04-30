@@ -2867,3 +2867,25 @@
 2022-04-24 05:56:17,680 [INFO] werkzeug: 192.168.48.1 - - [24/Apr/2022 05:56:17] "[33mGET /static/images/ironman.png HTTP/1.1[0m" 404 -
 2022-04-24 05:56:17,681 [INFO] werkzeug: 192.168.48.1 - - [24/Apr/2022 05:56:17] "[33mGET /static/images/bank1.png HTTP/1.1[0m" 404 -
 2022-04-24 05:56:17,682 [INFO] werkzeug: 192.168.48.1 - - [24/Apr/2022 05:56:17] "[33mGET /static/images/bankofethan.svg HTTP/1.1[0m" 404 -
+2022-04-30 17:43:19,279 [INFO] werkzeug: 192.168.48.1 - - [30/Apr/2022 17:43:19] "GET / HTTP/1.1" 200 -
+2022-04-30 17:43:19,467 [INFO] werkzeug: 192.168.48.1 - - [30/Apr/2022 17:43:19] "GET /static/css/style.css HTTP/1.1" 200 -
+2022-04-30 17:43:19,473 [INFO] werkzeug: 192.168.48.1 - - [30/Apr/2022 17:43:19] "GET /static/images/logo.png HTTP/1.1" 200 -
+2022-04-30 17:43:19,719 [INFO] werkzeug: 192.168.48.1 - - [30/Apr/2022 17:43:19] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2022-04-30 17:43:43,738 [INFO] werkzeug: 192.168.48.1 - - [30/Apr/2022 17:43:43] "GET /home?page=Index HTTP/1.1" 200 -
+2022-04-30 17:43:43,898 [INFO] werkzeug: 192.168.48.1 - - [30/Apr/2022 17:43:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-04-30 17:43:43,900 [INFO] werkzeug: 192.168.48.1 - - [30/Apr/2022 17:43:43] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2022-04-30 17:43:43,957 [INFO] werkzeug: 192.168.48.1 - - [30/Apr/2022 17:43:43] "GET /static/images/bank4.jpg HTTP/1.1" 200 -
+2022-04-30 17:43:44,086 [INFO] werkzeug: 192.168.48.1 - - [30/Apr/2022 17:43:44] "GET /static/images/bank2.jpg HTTP/1.1" 200 -
+2022-04-30 17:43:44,136 [INFO] werkzeug: 192.168.48.1 - - [30/Apr/2022 17:43:44] "GET /static/images/bank1.jpg HTTP/1.1" 200 -
+2022-04-30 17:43:44,206 [INFO] werkzeug: 192.168.48.1 - - [30/Apr/2022 17:43:44] "[33mGET /js/bootstrap.min.js HTTP/1.1[0m" 404 -
+2022-04-30 17:43:44,273 [INFO] werkzeug: 192.168.48.1 - - [30/Apr/2022 17:43:44] "[33mGET /static/images/ HTTP/1.1[0m" 404 -
+2022-04-30 18:03:51,005 [INFO] werkzeug:  * Detected change in '/home/myuser/app/db/models/__init__.py', reloading
+2022-04-30 19:47:38,544 [INFO] werkzeug: 192.168.48.1 - - [30/Apr/2022 19:47:38] "GET /home?page=Index HTTP/1.1" 200 -
+2022-04-30 19:47:38,750 [INFO] werkzeug: 192.168.48.1 - - [30/Apr/2022 19:47:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-04-30 19:47:38,763 [INFO] werkzeug: 192.168.48.1 - - [30/Apr/2022 19:47:38] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2022-04-30 19:47:38,788 [INFO] werkzeug: 192.168.48.1 - - [30/Apr/2022 19:47:38] "[36mGET /static/images/bank1.jpg HTTP/1.1[0m" 304 -
+2022-04-30 19:47:38,809 [INFO] werkzeug: 192.168.48.1 - - [30/Apr/2022 19:47:38] "[36mGET /static/images/bank4.jpg HTTP/1.1[0m" 304 -
+2022-04-30 19:47:38,831 [INFO] werkzeug: 192.168.48.1 - - [30/Apr/2022 19:47:38] "[36mGET /static/images/bank2.jpg HTTP/1.1[0m" 304 -
+2022-04-30 19:47:38,851 [INFO] werkzeug: 192.168.48.1 - - [30/Apr/2022 19:47:38] "[33mGET /js/bootstrap.min.js HTTP/1.1[0m" 404 -
+2022-04-30 19:47:39,041 [INFO] werkzeug: 192.168.48.1 - - [30/Apr/2022 19:47:39] "[33mGET /static/images/ HTTP/1.1[0m" 404 -
+2022-04-30 19:47:39,075 [INFO] werkzeug: 192.168.48.1 - - [30/Apr/2022 19:47:39] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -

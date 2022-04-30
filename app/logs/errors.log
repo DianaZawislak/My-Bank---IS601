@@ -127,3 +127,9 @@
 2022-04-24 03:51:30,840 [INFO] myerrors: This has broken
 2022-04-24 03:51:30,840 [DEBUG] myerrors: Debug Logger
 2022-04-24 03:51:30,840 [WARNING] myerrors: warning
+2022-04-30 17:43:19,001 [INFO] myerrors: This has broken
+2022-04-30 17:43:19,002 [DEBUG] myerrors: Debug Logger
+2022-04-30 17:43:19,004 [WARNING] myerrors: warning
+2022-04-30 19:47:38,246 [INFO] myerrors: This has broken
+2022-04-30 19:47:38,249 [DEBUG] myerrors: Debug Logger
+2022-04-30 19:47:38,265 [WARNING] myerrors: warning

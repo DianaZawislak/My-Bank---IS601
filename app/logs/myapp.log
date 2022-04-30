@@ -3080,3 +3080,33 @@
 [2022-04-24 05:56:17,666] [940] 192.168.48.1 requested http://localhost/static/images/bank1.pngINFO in __init__: My App Logger
 [2022-04-24 05:56:17,673] [940] 192.168.48.1 requested http://localhost/static/images/ironman.pngINFO in __init__: My App Logger
 [2022-04-24 05:56:17,674] [940] 192.168.48.1 requested http://localhost/static/images/bankofethan.svgINFO in __init__: My App Logger
+[2022-04-30 17:43:18,995] [34] 192.168.48.1 requested http://localhost/INFO in __init__: My App Logger
+[2022-04-30 17:43:18,999] [34] 192.168.48.1 requested http://localhost/DEBUG in __init__: Debug Logger
+[2022-04-30 17:43:19,022] [34] 192.168.48.1 requested http://localhost/INFO in __init__: My App Logger
+[2022-04-30 17:43:19,270] [34] 192.168.48.1 requested http://localhost/INFO in __init__: My App Logger
+[2022-04-30 17:43:19,357] [34] 192.168.48.1 requested http://localhost/static/css/style.cssINFO in __init__: My App Logger
+[2022-04-30 17:43:19,407] [34] 192.168.48.1 requested http://localhost/static/images/logo.pngINFO in __init__: My App Logger
+[2022-04-30 17:43:19,658] [34] 192.168.48.1 requested http://localhost/static/images/logo.pngINFO in __init__: My App Logger
+[2022-04-30 17:43:43,532] [34] 192.168.48.1 requested http://localhost/home?page=IndexINFO in __init__: My App Logger
+[2022-04-30 17:43:43,726] [34] 192.168.48.1 requested http://localhost/home?page=IndexINFO in __init__: My App Logger
+[2022-04-30 17:43:43,815] [34] 192.168.48.1 requested http://localhost/static/css/style.cssINFO in __init__: My App Logger
+[2022-04-30 17:43:43,835] [34] 192.168.48.1 requested http://localhost/static/images/logo.pngINFO in __init__: My App Logger
+[2022-04-30 17:43:43,843] [34] 192.168.48.1 requested http://localhost/static/images/bank4.jpgINFO in __init__: My App Logger
+[2022-04-30 17:43:43,874] [34] 192.168.48.1 requested http://localhost/js/bootstrap.min.jsINFO in __init__: My App Logger
+[2022-04-30 17:43:43,893] [34] 192.168.48.1 requested http://localhost/static/images/bank2.jpgINFO in __init__: My App Logger
+[2022-04-30 17:43:43,899] [34] 192.168.48.1 requested http://localhost/static/images/bank1.jpgINFO in __init__: My App Logger
+[2022-04-30 17:43:44,046] [34] 192.168.48.1 requested http://localhost/js/bootstrap.min.jsINFO in __init__: My App Logger
+[2022-04-30 17:43:44,125] [34] 192.168.48.1 requested http://localhost/static/images/INFO in __init__: My App Logger
+[2022-04-30 19:47:38,230] [174] 192.168.48.1 requested http://localhost/home?page=IndexINFO in __init__: My App Logger
+[2022-04-30 19:47:38,237] [174] 192.168.48.1 requested http://localhost/home?page=IndexDEBUG in __init__: Debug Logger
+[2022-04-30 19:47:38,288] [174] 192.168.48.1 requested http://localhost/home?page=IndexINFO in __init__: My App Logger
+[2022-04-30 19:47:38,530] [174] 192.168.48.1 requested http://localhost/home?page=IndexINFO in __init__: My App Logger
+[2022-04-30 19:47:38,640] [174] 192.168.48.1 requested http://localhost/js/bootstrap.min.jsINFO in __init__: My App Logger
+[2022-04-30 19:47:38,652] [174] 192.168.48.1 requested http://localhost/static/css/style.cssINFO in __init__: My App Logger
+[2022-04-30 19:47:38,668] [174] 192.168.48.1 requested http://localhost/static/images/logo.pngINFO in __init__: My App Logger
+[2022-04-30 19:47:38,683] [174] 192.168.48.1 requested http://localhost/static/images/bank1.jpgINFO in __init__: My App Logger
+[2022-04-30 19:47:38,703] [174] 192.168.48.1 requested http://localhost/static/images/bank4.jpgINFO in __init__: My App Logger
+[2022-04-30 19:47:38,731] [174] 192.168.48.1 requested http://localhost/static/images/bank2.jpgINFO in __init__: My App Logger
+[2022-04-30 19:47:38,748] [174] 192.168.48.1 requested http://localhost/js/bootstrap.min.jsINFO in __init__: My App Logger
+[2022-04-30 19:47:38,921] [174] 192.168.48.1 requested http://localhost/static/images/INFO in __init__: My App Logger
+[2022-04-30 19:47:39,038] [174] 192.168.48.1 requested http://localhost/static/images/logo.pngINFO in __init__: My App Logger

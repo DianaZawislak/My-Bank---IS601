@@ -170,3 +170,11 @@
 [2022-04-24 03:51:30,841] [728] 192.168.48.1 requested http://localhost/index?page=IndexDEBUG in __init__: Debug Logger
 [2022-04-24 03:51:30,841] [728] 192.168.48.1 requested http://localhost/index?page=IndexWARNING in __init__: WARNING
 [2022-04-24 03:51:30,842] [728] 192.168.48.1 requested http://localhost/index?page=IndexCRITICAL in __init__: CRITICAL
+[2022-04-30 17:43:19,012] [34] 192.168.48.1 requested http://localhost/INFO in __init__: Request Logger
+[2022-04-30 17:43:19,013] [34] 192.168.48.1 requested http://localhost/DEBUG in __init__: Debug Logger
+[2022-04-30 17:43:19,016] [34] 192.168.48.1 requested http://localhost/WARNING in __init__: WARNING
+[2022-04-30 17:43:19,018] [34] 192.168.48.1 requested http://localhost/CRITICAL in __init__: CRITICAL
+[2022-04-30 19:47:38,277] [174] 192.168.48.1 requested http://localhost/home?page=IndexINFO in __init__: Request Logger
+[2022-04-30 19:47:38,280] [174] 192.168.48.1 requested http://localhost/home?page=IndexDEBUG in __init__: Debug Logger
+[2022-04-30 19:47:38,282] [174] 192.168.48.1 requested http://localhost/home?page=IndexWARNING in __init__: WARNING
+[2022-04-30 19:47:38,284] [174] 192.168.48.1 requested http://localhost/home?page=IndexCRITICAL in __init__: CRITICAL

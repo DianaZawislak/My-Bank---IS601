@@ -1,8 +1,10 @@
 from datetime import datetime
 
+from sqlalchemy.orm import relationship
 from werkzeug.security import check_password_hash, generate_password_hash
 from app.db import db
 from flask_login import UserMixin
+from sqlalchemy_serializer import SerializerMixin
 
 
 class User(UserMixin, db.Model):
@@ -24,6 +26,20 @@ class User(UserMixin, db.Model):
         self.email = email
         self.password = password
         self.registered_on = datetime.utcnow()
+
+    class Transaction(db.Model, SerializerMixin):
+        __tablename__ = 'transactions'
+        id = db.Column(db.Integer, primary_key=True)
+        amount = db.Column(db.String(300), nullable=True, unique=False)
+        type = db.Column(db.String(300), nullable=True, unique=False)
+        balance = db.Column(db.String(300), nullable=True, unique=False)
+        user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+        user = relationship("User", back_populates="transactions", uselist=False)
+
+        def __init__(self, title, artist, genre, year):
+            self.amount = amount
+            self.type = type
+            self.balance = balance
 
     def is_authenticated(self):
         return True
