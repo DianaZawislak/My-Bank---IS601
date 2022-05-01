@@ -7,9 +7,22 @@ from flask_login import UserMixin
 from sqlalchemy_serializer import SerializerMixin
 
 
+class Transaction(db.Model, SerializerMixin):
+    __tablename__ = 'transactions'
+    id = db.Column(db.Integer, primary_key=True)
+    amount = db.Column(db.Float, nullable=True, unique=False)
+    type = db.Column(db.String(300), nullable=True, unique=False)
+    balance = db.Column(db.Float, nullable=True, unique=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    user = relationship("User", backref="transaction", uselist=False)
+
+    def __init__(self, amount, type, balance):
+        self.amount = amount
+        self.type = type
+        self.balance = balance
+
 class User(UserMixin, db.Model):
     __tablename__ = 'users'
-
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(300), nullable=False, unique=True)
@@ -27,19 +40,7 @@ class User(UserMixin, db.Model):
         self.password = password
         self.registered_on = datetime.utcnow()
 
-    class Transaction(db.Model, SerializerMixin):
-        __tablename__ = 'transactions'
-        id = db.Column(db.Integer, primary_key=True)
-        amount = db.Column(db.String(300), nullable=True, unique=False)
-        type = db.Column(db.String(300), nullable=True, unique=False)
-        balance = db.Column(db.String(300), nullable=True, unique=False)
-        user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-        user = relationship("User", back_populates="transactions", uselist=False)
 
-        def __init__(self, title, artist, genre, year):
-            self.amount = amount
-            self.type = type
-            self.balance = balance
 
     def is_authenticated(self):
         return True
