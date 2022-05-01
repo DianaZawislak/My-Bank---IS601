@@ -7,6 +7,7 @@ from flask_wtf.csrf import CSRFProtect
 from app.cli import create_log_folder
 from app.auth import auth
 from app.admin import admin
+from app.transactions import transactions
 from app.cli import create_database
 from app.context_processors import utility_text_processors
 from app.db import db, database
@@ -41,6 +42,7 @@ def create_app():
     app.register_blueprint(simple_pages)
     app.register_blueprint(auth)
     app.register_blueprint(admin)
+    app.register_blueprint(transactions)
     app.register_blueprint(database)
     # these load functionality without a web interface
     app.register_blueprint(log_con)
@@ -62,3 +64,4 @@ def user_loader(user_id):
         return User.query.get(int(user_id))
     except:
         return None
+
