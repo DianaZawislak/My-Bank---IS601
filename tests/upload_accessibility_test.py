@@ -17,7 +17,7 @@ def test_upload_access_granted(client, application):
     @application.login_manager.request_loader
     def load_user_from_request(request):
         return User.query.first()
-    response = client.get('/songs')
+    response = client.get('/transactions')
     assert response.status_code == 200
     assert b"Upload" in response.data
 
