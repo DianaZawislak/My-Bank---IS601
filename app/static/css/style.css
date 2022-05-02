@@ -1,10 +1,10 @@
 
 body {
-font-size: 75%;
+font-size: 60%;
     background-image: linear-gradient(to bottom right, #808080, #f2f3f4) !important;
     background-repeat: no-repeat;
-    background-size: 75%;
-    height: 75%;
+    background-size: 60%;
+    height: 60%;
     margin: 0;
     background-attachment: fixed;
 }
