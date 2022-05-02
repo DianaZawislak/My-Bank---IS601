@@ -1,5 +1,6 @@
-from flask import Blueprint, render_template, redirect, url_for, flash,current_app
+fixed somefrom flask import Blueprint, render_template, redirect, url_for, flash, current_app, abort
 from flask_login import login_user, login_required, logout_user, current_user
+from jinja2 import TemplateNotFound
 from markupsafe import Markup
 from werkzeug.security import generate_password_hash
 
@@ -66,10 +67,27 @@ def logout():
 
 
 
-@auth.route('/dashboard')
+@auth.route('/dashboard', methods=['GET'], defaults={"page": 1})
+@auth.route('/dashboard/<int:page>', methods=['GET'])
 @login_required
-def dashboard():
-    return render_template('dashboard.html')
+def dashboard(page):
+    page = page
+    per_page = 1000
+    #pagination = Location.query.filter_by(users=current_user.id).paginate(page, per_page, error_out=False)
+    #pagination = Location.query.all(users=current_user.id).paginate(page, per_page, error_out=False)
+
+    #pagination = db.session.query(Location, User).filter(location_user.location_id == Location.id,
+            #                                   location_user.user_id == User.id).order_by(Location.location_id).all()
+
+    #pagination = User.query.join(location_user).filter(location_user.user_id == current_user.id).paginate()
+
+    data = current_user.transactions
+
+    try:
+        return render_template('dashboard.html',data=data)
+    except TemplateNotFound:
+        abort(404)
+        return render_template('dashboard.html')
 
 
 @auth.route('/profile', methods=['POST', 'GET'])

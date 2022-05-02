@@ -178,3 +178,23 @@
 [2022-04-30 19:47:38,280] [174] 192.168.48.1 requested http://localhost/home?page=IndexDEBUG in __init__: Debug Logger
 [2022-04-30 19:47:38,282] [174] 192.168.48.1 requested http://localhost/home?page=IndexWARNING in __init__: WARNING
 [2022-04-30 19:47:38,284] [174] 192.168.48.1 requested http://localhost/home?page=IndexCRITICAL in __init__: CRITICAL
+[2022-04-30 20:01:29,087] [187] 192.168.48.1 requested http://localhost/loginINFO in __init__: Request Logger
+[2022-04-30 20:01:29,092] [187] 192.168.48.1 requested http://localhost/loginDEBUG in __init__: Debug Logger
+[2022-04-30 20:01:29,094] [187] 192.168.48.1 requested http://localhost/loginWARNING in __init__: WARNING
+[2022-04-30 20:01:29,096] [187] 192.168.48.1 requested http://localhost/loginCRITICAL in __init__: CRITICAL
+[2022-04-30 20:04:39,610] [199] 192.168.48.1 requested http://localhost/register?page=RegisterINFO in __init__: Request Logger
+[2022-04-30 20:04:39,612] [199] 192.168.48.1 requested http://localhost/register?page=RegisterDEBUG in __init__: Debug Logger
+[2022-04-30 20:04:39,632] [199] 192.168.48.1 requested http://localhost/register?page=RegisterWARNING in __init__: WARNING
+[2022-04-30 20:04:39,636] [199] 192.168.48.1 requested http://localhost/register?page=RegisterCRITICAL in __init__: CRITICAL
+[2022-04-30 20:09:52,851] [222] 192.168.48.1 requested http://localhost/INFO in __init__: Request Logger
+[2022-04-30 20:09:52,852] [222] 192.168.48.1 requested http://localhost/DEBUG in __init__: Debug Logger
+[2022-04-30 20:09:52,857] [222] 192.168.48.1 requested http://localhost/WARNING in __init__: WARNING
+[2022-04-30 20:09:52,861] [222] 192.168.48.1 requested http://localhost/CRITICAL in __init__: CRITICAL
+[2022-04-30 20:17:49,152] [243] 192.168.48.1 requested http://localhost/INFO in __init__: Request Logger
+[2022-04-30 20:17:49,154] [243] 192.168.48.1 requested http://localhost/DEBUG in __init__: Debug Logger
+[2022-04-30 20:17:49,157] [243] 192.168.48.1 requested http://localhost/WARNING in __init__: WARNING
+[2022-04-30 20:17:49,160] [243] 192.168.48.1 requested http://localhost/CRITICAL in __init__: CRITICAL
+[2022-04-30 20:31:06,586] [277] 192.168.48.1 requested http://localhost/profileINFO in __init__: Request Logger
+[2022-04-30 20:31:06,592] [277] 192.168.48.1 requested http://localhost/profileDEBUG in __init__: Debug Logger
+[2022-04-30 20:31:06,607] [277] 192.168.48.1 requested http://localhost/profileWARNING in __init__: WARNING
+[2022-04-30 20:31:06,611] [277] 192.168.48.1 requested http://localhost/profileCRITICAL in __init__: CRITICAL

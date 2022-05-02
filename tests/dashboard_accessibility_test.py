@@ -5,13 +5,13 @@ data = {'email': 'diana@test.com', 'password': 'diana123'}
 user = User('diana@test.com', generate_password_hash('diana123'))
 
 def test_dashboard_access_denied(client):
-    '''Tests dashboard not accesible when not logged in'''
+    '''Tests dashboard not accessible when not logged in'''
     response = client.get('/dashboard', follow_redirects=False)
     assert response.status_code == 302
     #Unauthenticated users are redirected to Login page'''
     response = client.get('/dashboard', follow_redirects=True)
     assert response.status_code == 200
-    assert b"Login" in response.data
+    assert b"If you do not have an account, please" in response.data
 
 
 #def test_dashboard_access_granted(client):

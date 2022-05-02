@@ -117,10 +117,10 @@ LOGGING_CONFIG = {
             'backupCount': 5,
         },
 
-        'file.handler.song_uploads': {
+        'file.handler.transactions_uploads': {
             'class': 'logging.handlers.RotatingFileHandler',
             'formatter': 'standard',
-            'filename': os.path.join(config.Config.LOG_DIR, 'song_uploads.log'),
+            'filename': os.path.join(config.Config.LOG_DIR, 'transactions_uploads.log'),
             'maxBytes': 10000000,
             'backupCount': 5,
         },
@@ -167,8 +167,8 @@ LOGGING_CONFIG = {
             'propagate': False
         },
 
-        'song_uploads': {  # if __name__ == '__main__'
-            'handlers': ['file.handler.song_uploads'],
+        'transactions_uploads': {  # if __name__ == '__main__'
+            'handlers': ['file.handler.transactions_uploads'],
             'level': 'INFO',
             'propagate': False
         },

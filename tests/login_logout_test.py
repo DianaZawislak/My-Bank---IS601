@@ -22,6 +22,14 @@ def test_login(client, application):
         #Successful log in routes to dashboard page
         assert b"Dashboard" in response.data
 
+def test_logout(client, test_user):
+    # pylint: disable=unused-argument,redefined-outer-name
+        response = client.get('/logout')
+        # go to index if logged in
+        assert response.status_code == 302
+        assert b'login' in response.data
+        assert test_user.is_authenticated() == False
+
 
 
 
