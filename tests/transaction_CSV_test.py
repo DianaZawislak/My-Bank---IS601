@@ -3,7 +3,7 @@ import os
 import csv
 
 from app import db
-from app.db.models import User, Song
+from app.db.models import User, Transaction
 from app import create_app, db, config
 
 BASE_DIR = config.Config.BASE_DIR
@@ -20,8 +20,8 @@ def test_upload_dir():
 
 def test_upload_csv():
     '''Tests for csv file creation/existence'''
-    fields = ['Name', 'Artist', 'Year', 'Genre']
-    rows = [['Califonia Love', '2Pac', '2009', 'Hip-Hop/Rap']]
+    fields = ['AMOUNT', 'TYPE', 'BALANCE']
+    rows = [['2000', 'DEBIT', '0']]
 
     with open(test_file, 'w') as csvfile:
         csvwriter = csv.writer(csvfile)
@@ -43,11 +43,11 @@ def test_csv_processed(application):
         with open(test_file) as file:
             csv_file = csv.DictReader(file)
             for row in csv_file:
-                list_of_songs.append(Song(row['Name'], row['Artist'], row['Year'], row['Genre']))
+                list_of_songs.append(Transaction(row['AMOUNT'], row['TYPE'], row['BALANCE']))
         user.songs = list_of_songs
         db.session.commit()
         # Tests CSV data was successfully loaded to db
-        test_song = Song.query.filter_by(title='California Love').first()
+        test_song = Transaction.query.filter_by(title='California Love').first()
         assert test_song.title == 'California Love'
         # Breaks down test user and confirms db is empty
         db.session.delete(user)
