@@ -9,10 +9,11 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>DZ bank</title>
   </head>
+    <div class="container-fluid">
     <div class="row mt-5">
         <body class="text-center grad">
         {% from 'bootstrap5/form.html' import render_form, render_field, render_form_row %}
-             <div class="col-4  rounded-3 mx-auto mb-4 p-4 box" style="background-color: whitesmoke">
+             <div class="col-4  rounded-3 mx-auto mb-4 p-4 box" style="background-color: darkgrey">
                  <img class="mb-4 text-center" src="{{ url_for('static', filename='images/logo.png') }}"
                       height="190">
                  {{ render_form(form) }}
@@ -29,6 +30,7 @@
              </div>
         </body>
      </div>
+    </div>
 
     <style>
         body {

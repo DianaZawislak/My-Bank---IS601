@@ -1065,3 +1065,22 @@
 2022-05-02 19:28:33,229 [INFO] werkzeug: 192.168.80.1 - - [02/May/2022 19:28:33] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
 2022-05-02 19:28:33,231 [INFO] werkzeug: 192.168.80.1 - - [02/May/2022 19:28:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
 2022-05-02 19:28:35,132 [INFO] werkzeug: 192.168.80.1 - - [02/May/2022 19:28:35] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2022-05-02 19:51:09,531 [INFO] werkzeug:  * Detected change in '/home/myuser/app/auth/__init__.py', reloading
+2022-05-02 20:16:24,015 [INFO] werkzeug: 192.168.80.1 - - [02/May/2022 20:16:24] "GET /dashboard HTTP/1.1" 200 -
+2022-05-02 20:16:24,107 [INFO] werkzeug: 192.168.80.1 - - [02/May/2022 20:16:24] "GET /static/css/style.css HTTP/1.1" 200 -
+2022-05-02 20:16:24,110 [INFO] werkzeug: 192.168.80.1 - - [02/May/2022 20:16:24] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2022-05-02 20:16:25,088 [INFO] werkzeug: 192.168.80.1 - - [02/May/2022 20:16:25] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2022-05-02 20:16:28,645 [INFO] werkzeug: 192.168.80.1 - - [02/May/2022 20:16:28] "GET /about HTTP/1.1" 200 -
+2022-05-02 20:16:28,698 [INFO] werkzeug: 192.168.80.1 - - [02/May/2022 20:16:28] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2022-05-02 20:16:28,703 [INFO] werkzeug: 192.168.80.1 - - [02/May/2022 20:16:28] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-02 20:16:30,539 [INFO] werkzeug: 192.168.80.1 - - [02/May/2022 20:16:30] "GET /dashboard HTTP/1.1" 200 -
+2022-05-02 20:16:30,644 [INFO] werkzeug: 192.168.80.1 - - [02/May/2022 20:16:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-02 20:16:30,646 [INFO] werkzeug: 192.168.80.1 - - [02/May/2022 20:16:30] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2022-05-02 20:16:37,865 [INFO] werkzeug: 192.168.80.1 - - [02/May/2022 20:16:37] "[32mGET /logout HTTP/1.1[0m" 302 -
+2022-05-02 20:16:37,895 [INFO] werkzeug: 192.168.80.1 - - [02/May/2022 20:16:37] "GET /login HTTP/1.1" 200 -
+2022-05-02 20:16:37,934 [INFO] werkzeug: 192.168.80.1 - - [02/May/2022 20:16:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-02 20:16:37,949 [INFO] werkzeug: 192.168.80.1 - - [02/May/2022 20:16:37] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2022-05-02 20:36:01,948 [INFO] werkzeug: 192.168.80.1 - - [02/May/2022 20:36:01] "GET /login HTTP/1.1" 200 -
+2022-05-02 20:36:02,016 [INFO] werkzeug: 192.168.80.1 - - [02/May/2022 20:36:02] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2022-05-02 20:36:02,023 [INFO] werkzeug: 192.168.80.1 - - [02/May/2022 20:36:02] "GET /static/css/style.css HTTP/1.1" 200 -
+2022-05-02 20:36:02,070 [INFO] werkzeug: 192.168.80.1 - - [02/May/2022 20:36:02] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
