@@ -1,7 +1,7 @@
 """ fixture to add/delete user """
 import pytest
 from app import db
-from app.db.models import User, Song
+from app.db.models import User, Transaction
 
 
 @pytest.fixture
@@ -24,4 +24,4 @@ def add_db_user_fixture(application):
 
         db.session.delete(user) # pylint: disable=no-member
         assert db.session.query(User).count() == 0 # pylint: disable=no-member
-        assert db.session.query(Song).count() == 0 # pylint: disable=no-member
+        assert db.session.query(Transaction).count() == 0 # pylint: disable=no-member
