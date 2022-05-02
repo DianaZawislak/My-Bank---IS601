@@ -24,15 +24,15 @@ def test_adding_user(application):
         #asserting that the user retrieved is correct
         assert user.email == 'dog@dog.com'
         #this is how you get a related record ready for insert
-        user.songs = [Transaction("test", "smap", "dsf", "sdf"), Transaction("test2", "te", "dsf", "sdf")]
+        user.transactions = [Transaction("test", "smap", "dsf"), Transaction("test2", "te", "dsf")]
         db.session.commit()
         assert db.session.query(Transaction).count() == 2
-        song1 = Transaction.query.filter_by(title='test').first()
-        assert song1.title == "test"
-        song1.title = "SuperSongTitle"
+        transaction1 = Transaction.query.filter_by(title='test').first()
+        assert transaction1.title == "test"
+        transaction1.title = "Supertransaction"
         db.session.commit()
-        song2 = Transaction.query.filter_by(title='SuperSongTitle').first()
-        assert song2.title == "SuperSongTitle"
+        transaction2 = Transaction.query.filter_by(title='Supertransaction').first()
+        assert transaction2.title == "Supertransaction"
         #checking cascade delete
         db.session.delete(user)
         assert db.session.query(User).count() == 0
