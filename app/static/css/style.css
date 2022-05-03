@@ -147,3 +147,7 @@ a {
 
 }
 
+.dataTables_lenght {
+    width: 50% !important;
+}
+
