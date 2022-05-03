@@ -14,7 +14,7 @@
         <body class="text-center grad">
         {% from 'bootstrap5/form.html' import render_form, render_field, render_form_row %}
              <div class="col-4  rounded-3 mx-auto mb-4 p-4 box" style="background-color: darkgrey">
-                 <img class="mb-4 text-center" src="{{ url_for('static', filename='images/logo.png') }}"
+                 <img class="mb-4 text-center img-fluid" src="{{ url_for('static', filename='images/logo.png') }}"
                       height="190">
                  {{ render_form(form) }}
                  <br>
