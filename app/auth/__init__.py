@@ -74,7 +74,7 @@ def login():
             db.session.commit()
             login_user(user)
             flash("Welcome", 'success')
-            return redirect(url_for('auth.dashboard'))
+            return redirect(url_for('auth.index'))
     return render_template('login.html', form=form)
 
 @auth.route("/logout")
