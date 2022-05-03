@@ -136,3 +136,14 @@ a {
     border: 1px solid #003399!important;
 }
 
+.card-body {
+    background-image: linear-gradient(to bottom right, #808080, #f2f3f4) !important;
+}
+
+.carousel-item> img {
+  width:auto !important;
+  height:450px !important;
+
+
+}
+

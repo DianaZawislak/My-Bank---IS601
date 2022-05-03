@@ -28,12 +28,12 @@
 <div class="container">
 
     <div class="row">
-        <header class="mb-2">
+        <header>
             {% from 'bootstrap5/nav.html' import render_nav_item %}
             {% from 'bootstrap5/utils.html' import render_messages %}
             {% from 'bootstrap5/form.html' import render_form, render_field, render_form_row %}
 
-            <nav class="navbar navbar-default navbar-expand-lg px-3 rounded-3">
+            <nav class="navbar navbar-default navbar-expand-lg rounded-3">
                 <a class="navbar-brand ml-5" >
 
                     <img src="{{ url_for('static', filename='images/logo.png') }}" height="60" width="100" alt="">
@@ -45,12 +45,14 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <div class="navbar-nav mr-auto">
+                    {{ render_nav_item('simple_pages.index', 'Home') }}
                         {% if current_user.is_authenticated %}
                             {{ render_nav_item('auth.dashboard','Dashboard' ) }}
                         {% else %}
                             {{ render_nav_item('simple_pages.index', 'Home') }}
                         {% endif %}
                         {{ render_nav_item('simple_pages.about','About') }}
+
 
                     </div>
                 </div>
