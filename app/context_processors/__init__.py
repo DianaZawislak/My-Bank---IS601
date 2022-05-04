@@ -2,6 +2,7 @@ from os import getenv
 import datetime
 
 import sqlalchemy
+from sqlalchemy.sql.functions import current_user, user
 
 from app.auth.forms import login_form
 
@@ -16,11 +17,13 @@ def utility_text_processors():
         engine = sqlalchemy.create_engine("sqlite:////home/myuser/database/db2.sqlite")
         data = sqlalchemy.MetaData(bind=engine)
         sqlalchemy.MetaData.reflect(data)
+        # user = current_user
         total = data.tables['transactions']
         query = sqlalchemy.select(sqlalchemy.func.sum(total.c.amount))
         result = engine.execute(query).fetchall()
-        return result
-
+        currency = str(result[0])
+        balance = currency[1:-2]
+        return "${:,.2f}".format(float(balance))
 
     def deployment_environment():
         return getenv('FLASK_ENV', None)
@@ -40,5 +43,6 @@ def utility_text_processors():
         deployment_environment=deployment_environment(),
         year=current_year(),
         format_price=format_price,
-        account_balance = account_balance
+        account_balance=account_balance,
+
     )
