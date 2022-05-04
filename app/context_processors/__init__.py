@@ -1,7 +1,9 @@
+from locale import currency
 from os import getenv
 import datetime
 
 import sqlalchemy
+from sqlalchemy import String, Float
 from sqlalchemy.sql.functions import current_user, user
 
 from app.auth.forms import login_form
@@ -11,19 +13,21 @@ def utility_text_processors():
     message = "hello world"
     form = login_form()
 
-
     def account_balance():
-        # THIS WILL PRINT THE BALANCE FOR ALL BANK'S TRANSACTIONS
         engine = sqlalchemy.create_engine("sqlite:////home/myuser/database/db2.sqlite")
         data = sqlalchemy.MetaData(bind=engine)
         sqlalchemy.MetaData.reflect(data)
-        # user = current_user
+
         total = data.tables['transactions']
-        query = sqlalchemy.select(sqlalchemy.func.sum(total.c.amount))
+        query = sqlalchemy.select([sqlalchemy.func.round(sqlalchemy.func.sum(total.c.amount), 2)])
         result = engine.execute(query).fetchall()
-        currency = str(result[0])
-        balance = currency[1:-2]
-        return "${:,.2f}".format(float(balance))
+        currency = "$"
+        # sum = []
+        # for record in result:
+        # print("\n", record[0], record[1])
+       # {{account_balance(result)}}
+        return currency, result
+
 
     def deployment_environment():
         return getenv('FLASK_ENV', None)
