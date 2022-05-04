@@ -13,3 +13,4 @@
 [2022-05-02 19:08:31,206] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:transactions_upload() LINE:55] lala@lala.com has uploaded trans.csv from 192.168.80.1
 [2022-05-03 03:02:47,463] INFO METHOD: GET FILENAME:__init__.py FUNCTION NAME:browse_users() LINE:28] Browse page loading from 172.22.0.1
 [2022-05-03 03:07:55,467] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:transactions_upload() LINE:55] diana@test.com has uploaded trans.csv from 172.22.0.1
+[2022-05-03 20:22:15,053] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:transactions_upload() LINE:55] dog@dog.com has uploaded trans.csv from 192.168.96.1
