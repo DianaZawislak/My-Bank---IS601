@@ -1,6 +1,49 @@
 {% extends "base.html" %}
-<article>{% block content %}
-    <h1>About</h1>
-    {{ lipsum (n=5, html=True, min=20, max=100) }}
+{% block content %}
+
+    <img src="{{ url_for('static', filename='images/njit.jpg') }}" class="outset img-fluid" alt="docker1">
+
+    <div class="container-fluid py-3">
+        <div class="row align-items stretch">
+            <div class="col-7">
+                <p class="fs-6"><span class="fs-3">T</span>his website was created to present skills and technology
+                    learned in Web Sysytems Development class, IS601 at New Jersey Institute of Tehnology.
+                    Author of this page is Diana Zawislak, student of Computer Science Master Certificate.
+                    Technologies used for this project are:
+                <ul>
+                    <li>GitHub and Git
+                    </li>
+                    <li>Docker and DockerHub
+                    </li>
+                    <li>Python and Flask
+                    </li>
+                    <li>CI/CD
+                    </li>
+                    <li>Heroku
+                    </li>
+                </ul>
+                <span class="fs-3">R</span>esources used:
+                <ul>
+                    <li>www.docker.com
+                    </li>
+                    <li>www.github.com
+                    </li>
+                    <li>www.Python.org
+                    </li>
+                    <li>www.wikipedia.com
+                    </li>
+                    <li>www.martinfowler.com</li>
+                </ul>
+            </div>
+            <div class="col-5">
+                <img src="{{ url_for('static', filename='images/me.png') }}"
+                     class="img-fluid"
+                     alt="me">
+            </div>
+
+            <div class="container">
+                <p> Please contact me at diana.zawislak@icloud.com with any questions or concerns
+                </p>
+            </div>
+
 {% endblock %}
-</article>
