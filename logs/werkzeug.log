@@ -4520,3 +4520,24 @@
 2022-05-04 04:29:42,297 [INFO] werkzeug: 172.24.0.1 - - [04/May/2022 04:29:42] "GET /static/images/me.png HTTP/1.1" 200 -
 2022-05-04 04:29:42,297 [INFO] werkzeug: 172.24.0.1 - - [04/May/2022 04:29:42] "[36mGET /static/images/logo2.png HTTP/1.1[0m" 304 -
 2022-05-04 04:29:42,311 [INFO] werkzeug: 172.24.0.1 - - [04/May/2022 04:29:42] "[33mGET /static/images/njit.jpg HTTP/1.1[0m" 404 -
+2022-05-04 19:40:53,866 [INFO] werkzeug: 192.168.96.1 - - [04/May/2022 19:40:53] "GET /transactions HTTP/1.1" 200 -
+2022-05-04 19:40:54,051 [INFO] werkzeug: 192.168.96.1 - - [04/May/2022 19:40:54] "GET /static/images/logo2.png HTTP/1.1" 200 -
+2022-05-04 19:40:54,058 [INFO] werkzeug: 192.168.96.1 - - [04/May/2022 19:40:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-04 19:40:54,064 [INFO] werkzeug: 192.168.96.1 - - [04/May/2022 19:40:54] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2022-05-04 19:40:54,394 [INFO] werkzeug: 192.168.96.1 - - [04/May/2022 19:40:54] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2022-05-04 23:07:02,955 [INFO] werkzeug:  * Detected change in '/home/myuser/app/context_processors/__init__.py', reloading
+2022-05-04 23:07:24,339 [INFO] werkzeug: 192.168.96.1 - - [04/May/2022 23:07:24] "[31m[1mPOST /transactions/upload HTTP/1.1[0m" 400 -
+2022-05-04 23:07:30,182 [INFO] werkzeug: 192.168.96.1 - - [04/May/2022 23:07:30] "[31m[1mPOST /transactions/upload HTTP/1.1[0m" 400 -
+2022-05-04 23:07:35,568 [INFO] werkzeug: 192.168.96.1 - - [04/May/2022 23:07:35] "GET / HTTP/1.1" 200 -
+2022-05-04 23:07:35,720 [INFO] werkzeug: 192.168.96.1 - - [04/May/2022 23:07:35] "GET /static/images/bank1.jpg HTTP/1.1" 200 -
+2022-05-04 23:07:35,729 [INFO] werkzeug: 192.168.96.1 - - [04/May/2022 23:07:35] "GET /static/images/bank4.jpg HTTP/1.1" 200 -
+2022-05-04 23:07:35,730 [INFO] werkzeug: 192.168.96.1 - - [04/May/2022 23:07:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-04 23:07:35,757 [INFO] werkzeug: 192.168.96.1 - - [04/May/2022 23:07:35] "GET /static/images/bank2.jpg HTTP/1.1" 200 -
+2022-05-04 23:07:35,762 [INFO] werkzeug: 192.168.96.1 - - [04/May/2022 23:07:35] "[36mGET /static/images/logo2.png HTTP/1.1[0m" 304 -
+2022-05-04 23:07:39,510 [INFO] werkzeug: 192.168.96.1 - - [04/May/2022 23:07:39] "GET /dashboard HTTP/1.1" 200 -
+2022-05-04 23:07:39,628 [INFO] werkzeug: 192.168.96.1 - - [04/May/2022 23:07:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-04 23:07:39,631 [INFO] werkzeug: 192.168.96.1 - - [04/May/2022 23:07:39] "[36mGET /static/images/logo2.png HTTP/1.1[0m" 304 -
+2022-05-04 23:07:44,963 [INFO] werkzeug: 192.168.96.1 - - [04/May/2022 23:07:44] "GET /transactions HTTP/1.1" 200 -
+2022-05-04 23:07:45,026 [INFO] werkzeug: 192.168.96.1 - - [04/May/2022 23:07:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-04 23:07:45,032 [INFO] werkzeug: 192.168.96.1 - - [04/May/2022 23:07:45] "[36mGET /static/images/logo2.png HTTP/1.1[0m" 304 -
+2022-05-04 23:07:45,037 [INFO] werkzeug: 192.168.96.1 - - [04/May/2022 23:07:45] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
