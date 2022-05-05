@@ -65,3 +65,5 @@ def transactions_upload():
 def info(id):
     user_info = database.query.filter_by(id=id).first()
     return render_template('dashboard.html', information=user_info)
+
+

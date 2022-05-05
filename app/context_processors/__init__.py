@@ -1,11 +1,12 @@
 from locale import currency
 from os import getenv
 import datetime
-
+from flask_login import current_user
 import sqlalchemy
 from sqlalchemy import String, Float
 from sqlalchemy.sql.functions import current_user, user
-
+from app.db.models import User
+from app import transactions
 from app.auth.forms import login_form
 
 
@@ -28,6 +29,13 @@ def utility_text_processors():
         except:
                 return ("$0.00")
 
+    def user_balance():
+        userid = current_user.id
+        user_trans = transactions.query.filter_by(user_id=userid).all()
+        total = 0
+        for trans in user_trans:
+            total += trans.amount
+        return "${:,.2f}".format(float(total))#
 
     def deployment_environment():
         return getenv('FLASK_ENV', None)
@@ -48,5 +56,5 @@ def utility_text_processors():
         year=current_year(),
         format_price=format_price,
         account_balance=account_balance,
-
+        user_balance=user_balance()
     )

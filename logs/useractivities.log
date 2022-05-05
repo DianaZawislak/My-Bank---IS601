@@ -21,3 +21,5 @@
 [2022-05-04 04:14:11,145] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:transactions_upload() LINE:55] dog@dog.com has uploaded trans.csv from 172.24.0.1
 [2022-05-04 23:07:24,333] INFO METHOD: POST FILENAME:csrf.py FUNCTION NAME:protect() LINE:263] The CSRF token has expired. from 192.168.96.1
 [2022-05-04 23:07:30,164] INFO METHOD: POST FILENAME:csrf.py FUNCTION NAME:protect() LINE:263] The CSRF token has expired. from 192.168.96.1
+[2022-05-05 02:32:29,744] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:transactions_upload() LINE:55] diana@test.com has uploaded trans.csv from 172.24.0.1
+[2022-05-05 02:32:41,939] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:transactions_upload() LINE:55] diana@test.com has uploaded trans.csv from 172.24.0.1
