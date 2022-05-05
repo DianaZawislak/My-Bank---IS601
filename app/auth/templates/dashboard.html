@@ -11,7 +11,7 @@
 
 <div class="row">
  <div class ="col-8">
- <!----<h3 class="mb-5">User Balance: {{ user_balance() }}</h3>--->
+
         {{ render_table(data) }}
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -25,7 +25,7 @@
         <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
  </div>
 <div class="col-4">
-    <img src="{{ url_for('static', filename='images/bank7.png') }}" class="outset img-fluid" alt="docker1">
+    <img src="{{ url_for('static', filename='images/bank7.png') }}" class="img-fluid" alt="docker1">
 </div>
         <script type=text/javascript>
             $(document).ready(function () {
