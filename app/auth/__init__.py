@@ -6,6 +6,7 @@ from werkzeug.security import generate_password_hash
 
 from .decorators import admin_required
 from .forms import login_form, register_form, profile_form, security_form, user_edit_form
+from .. import transactions
 from ..db import db
 from ..db.models import User
 
@@ -114,7 +115,7 @@ def logout():
 def dashboard(page):
     page = page
     per_page = 1000
-    #pagination = Location.query.filter_by(users=current_user.id).paginate(page, per_page, error_out=False)
+    #pagination = transactions.query.filter_by(users=current_user.id).paginate(page, per_page, error_out=False)
     #pagination = Location.query.all(users=current_user.id).paginate(page, per_page, error_out=False)
 
     #pagination = db.session.query(Location, User).filter(location_user.location_id == Location.id,

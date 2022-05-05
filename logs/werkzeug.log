@@ -4813,3 +4813,42 @@
 2022-05-05 03:59:34,454 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 03:59:34] "[36mGET /static/images/bank1.jpg HTTP/1.1[0m" 304 -
 2022-05-05 03:59:34,455 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 03:59:34] "[36mGET /static/images/bank2.jpg HTTP/1.1[0m" 304 -
 2022-05-05 03:59:34,491 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 03:59:34] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2022-05-05 04:00:38,048 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 04:00:38] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2022-05-05 04:00:38,065 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 04:00:38] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-05-05 04:00:38,065 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 04:00:38] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-05-05 04:00:38,075 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 04:00:38] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-05-05 04:01:10,932 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 04:01:10] "GET / HTTP/1.1" 200 -
+2022-05-05 04:01:10,956 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 04:01:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-05 04:01:10,956 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 04:01:10] "[36mGET /static/images/logo2.png HTTP/1.1[0m" 304 -
+2022-05-05 04:01:10,958 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 04:01:10] "[36mGET /static/images/bank1.jpg HTTP/1.1[0m" 304 -
+2022-05-05 04:01:10,958 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 04:01:10] "[36mGET /static/images/bank4.jpg HTTP/1.1[0m" 304 -
+2022-05-05 04:01:10,959 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 04:01:10] "[36mGET /static/images/bank2.jpg HTTP/1.1[0m" 304 -
+2022-05-05 04:01:10,984 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 04:01:10] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2022-05-05 04:01:12,957 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 04:01:12] "GET /dashboard HTTP/1.1" 200 -
+2022-05-05 04:01:12,983 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 04:01:12] "[36mGET /static/images/logo2.png HTTP/1.1[0m" 304 -
+2022-05-05 04:01:12,984 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 04:01:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-05 04:01:12,990 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 04:01:12] "GET /static/images/bank7.png HTTP/1.1" 200 -
+2022-05-05 04:01:56,035 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 04:01:56] "GET /dashboard HTTP/1.1" 200 -
+2022-05-05 04:01:56,057 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 04:01:56] "[36mGET /static/images/logo2.png HTTP/1.1[0m" 304 -
+2022-05-05 04:01:56,058 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 04:01:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-05 04:01:56,058 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 04:01:56] "[36mGET /static/images/bank7.png HTTP/1.1[0m" 304 -
+2022-05-05 04:01:56,364 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 04:01:56] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2022-05-05 14:19:18,980 [INFO] werkzeug:  * Detected change in '/home/myuser/app/auth/__init__.py', reloading
+2022-05-05 14:23:19,162 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 14:23:19] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2022-05-05 14:23:19,180 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 14:23:19] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-05-05 14:23:19,180 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 14:23:19] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-05-05 14:23:19,193 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 14:23:19] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-05-05 14:23:19,204 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 14:23:19] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-05-05 14:23:53,424 [INFO] werkzeug:  * Detected change in '/home/myuser/app/auth/__init__.py', reloading
+2022-05-05 14:23:54,635 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 14:23:54] "GET /dashboard HTTP/1.1" 200 -
+2022-05-05 14:23:54,659 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 14:23:54] "[36mGET /static/images/logo2.png HTTP/1.1[0m" 304 -
+2022-05-05 14:23:54,660 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 14:23:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-05 14:23:54,663 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 14:23:54] "[36mGET /static/images/bank7.png HTTP/1.1[0m" 304 -
+2022-05-05 14:23:54,938 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 14:23:54] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2022-05-05 14:24:40,194 [INFO] werkzeug:  * Detected change in '/home/myuser/app/auth/__init__.py', reloading
+2022-05-05 14:24:41,162 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 14:24:41] "GET /dashboard HTTP/1.1" 200 -
+2022-05-05 14:24:41,184 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 14:24:41] "[36mGET /static/images/logo2.png HTTP/1.1[0m" 304 -
+2022-05-05 14:24:41,184 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 14:24:41] "[36mGET /static/images/bank7.png HTTP/1.1[0m" 304 -
+2022-05-05 14:24:41,184 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 14:24:41] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-05 14:24:41,457 [INFO] werkzeug: 172.24.0.1 - - [05/May/2022 14:24:41] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2022-05-05 14:26:08,579 [INFO] werkzeug:  * Detected change in '/home/myuser/app/auth/__init__.py', reloading
