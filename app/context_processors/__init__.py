@@ -29,13 +29,13 @@ def utility_text_processors():
         except:
                 return ("$0.00")
 
-    def user_balance():
-        userid = current_user.id
-        user_trans = transactions.query.filter_by(user_id=userid).all()
-        total = 0
-        for trans in user_trans:
-            total += trans.amount
-        return "${:,.2f}".format(float(total))#
+    #def user_balance():
+      #  userid = current_user.id
+       # user_trans = transactions.query.filter_by(user_id=userid).all()
+        #total = 0
+        #for trans in user_trans:
+         #   total += trans.amount
+        #return "${:,.2f}".format(float(total))#
 
     def deployment_environment():
         return getenv('FLASK_ENV', None)
@@ -56,5 +56,5 @@ def utility_text_processors():
         year=current_year(),
         format_price=format_price,
         account_balance=account_balance,
-        user_balance=user_balance()
+        #user_balance=user_balance()
     )
