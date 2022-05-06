@@ -5,8 +5,6 @@ from flask_login import current_user
 from ..auth.forms import login_form, register_form, profile_form, security_form, user_edit_form
 from ..db import db
 from ..db.models import User
-from ..auth import auth
-from ..logs import *
 
 
 simple_pages = Blueprint('simple_pages', __name__, template_folder='templates')

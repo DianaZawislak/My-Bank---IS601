@@ -81,7 +81,7 @@ def register1():
 def login():
     form = login_form()
     if current_user.is_authenticated:
-        return redirect(url_for('auth.dashboard'))
+        return redirect(url_for('auth.index'))
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
         if user is None or not user.check_password(form.password.data):
