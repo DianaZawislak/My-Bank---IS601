@@ -4,7 +4,7 @@ from sqlalchemy import Integer, ForeignKey
 from sqlalchemy.orm import relationship
 from werkzeug.security import check_password_hash, generate_password_hash
 from app.db import db
-from flask_login import UserMixin
+from flask_login import UserMixin, AnonymousUserMixin
 from sqlalchemy_serializer import SerializerMixin
 
 transaction_user = db.Table('transaction_user', db.Model.metadata,
@@ -26,7 +26,7 @@ class Transaction(db.Model,SerializerMixin):
 
 
 
-class User(UserMixin, db.Model):
+class User(UserMixin, db.Model, AnonymousUserMixin):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
@@ -36,8 +36,6 @@ class User(UserMixin, db.Model):
     registered_on = db.Column('registered_on', db.DateTime)
     active = db.Column('is_active', db.Boolean(), nullable=False, server_default='1')
     is_admin = db.Column('is_admin', db.Boolean(), nullable=False, server_default='0')
-    songs = db.relationship("Song", back_populates="user", cascade="all, delete")
-    locations = db.relationship("Location", back_populates="user", cascade="all, delete")
     transactions = db.relationship("Transaction", back_populates="user", cascade="all, delete")
 
     # `roles` and `groups` are reserved words that *must* be defined

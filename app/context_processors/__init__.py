@@ -29,13 +29,15 @@ def utility_text_processors():
             return ("$0.00")
 
     def user_balance():
-        userid = current_user.id
-
-        user_trans = Transaction.query.filter_by(user_id=userid).all()
-        total = 0
-        for trans in user_trans:
-            total += trans.amount
-        return "${:,.2f}".format(float(total))
+        try:
+            userid = current_user.id
+            user_trans = Transaction.query.filter_by(user_id=userid).all()
+            total = 0
+            for trans in user_trans:
+                total += trans.amount
+            return "${:,.2f}".format(float(total))
+        except:
+            return AttributeError
 
     def deployment_environment():
         return getenv('FLASK_ENV', None)
