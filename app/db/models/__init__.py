@@ -26,7 +26,7 @@ class Transaction(db.Model,SerializerMixin):
 
 
 
-class User(UserMixin, db.Model, AnonymousUserMixin):
+class User(UserMixin, db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
@@ -37,7 +37,6 @@ class User(UserMixin, db.Model, AnonymousUserMixin):
     active = db.Column('is_active', db.Boolean(), nullable=False, server_default='1')
     is_admin = db.Column('is_admin', db.Boolean(), nullable=False, server_default='0')
     transactions = db.relationship("Transaction", back_populates="user", cascade="all, delete")
-
     # `roles` and `groups` are reserved words that *must* be defined
     # on the `User` model to use group- or role-based authorization.
 

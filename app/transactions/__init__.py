@@ -50,7 +50,7 @@ def transactions_upload():
             for row in csv_file:
                 list_of_transactions.append(Transaction(row['Amount'], row['Type']))
 
-        current_user.transactions = list_of_transactions
+        current_user.transactions += list_of_transactions
         db.session.commit()
         after_request_transactions_upload()
         current_app.logger.info(user.email + " has uploaded " + filename)
