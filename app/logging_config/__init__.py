@@ -73,10 +73,10 @@ LOGGING_CONFIG = {
             'maxBytes': 10000000,
             'backupCount': 5,
         },
-        'file.handler.myApp': {
+        'file.handler.DianasApp': {
             'class': 'logging.handlers.RotatingFileHandler',
             'formatter': 'standard',
-            'filename': os.path.join(config.Config.LOG_DIR, 'myApp.log'),
+            'filename': os.path.join(config.Config.LOG_DIR, 'DianasApp.log'),
             'maxBytes': 10000000,
             'backupCount': 5,
         },
@@ -146,14 +146,14 @@ LOGGING_CONFIG = {
             'level': 'INFO',
             'propagate': False
         },
-        'myApp': {  # if __name__ == '__main__'
-            'handlers': ['file.handler.myApp'],
+        'DianasApp': {  # if __name__ == '__main__'
+            'handlers': ['file.handler.DianasApp'],
             'level': 'INFO',
             'propagate': False
         },
         'myerrors': {  # if __name__ == '__main__'
             'handlers': ['file.handler.errors'],
-            'level': 'INFO',
+            'level': 'DEBUG',
             'propagate': False
         },
         'myrequests': {  # if __name__ == '__main__'
@@ -163,7 +163,7 @@ LOGGING_CONFIG = {
         },
         'mydebugs': {  # if __name__ == '__main__'
             'handlers': ['file.handler.debugs'],
-            'level': 'INFO',
+            'level': 'DEBUG',
             'propagate': False
         },
 
