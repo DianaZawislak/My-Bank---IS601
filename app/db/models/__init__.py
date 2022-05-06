@@ -12,6 +12,15 @@ transaction_user = db.Table('transaction_user', db.Model.metadata,
     db.Column('transaction_id', db.Integer, db.ForeignKey('transactions.id'))
 )
 
+location_user = db.Table('location_user', db.Model.metadata,
+    db.Column('user_id', db.Integer, db.ForeignKey('users.id')),
+    db.Column('location_id', db.Integer, db.ForeignKey('locations.id'))
+)
+song_user = db.Table('song_user', db.Model.metadata,
+    db.Column('user_id', db.Integer, db.ForeignKey('users.id')),
+    db.Column('song_id', db.Integer, db.ForeignKey('songs.id'))
+)
+
 class Transaction(db.Model,SerializerMixin):
     __tablename__ = 'transactions'
     id = db.Column(db.Integer, primary_key=True)
@@ -23,6 +32,44 @@ class Transaction(db.Model,SerializerMixin):
     def __init__(self, amount, type):
         self.amount = amount
         self.type = type
+
+class Song(db.Model,SerializerMixin):
+    __tablename__ = 'songs'
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(300), nullable=True, unique=False)
+    artist = db.Column(db.String(300), nullable=True, unique=False)
+    genre = db.Column(db.String(300), nullable=True, unique=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    user = relationship("User", back_populates="songs", uselist=False)
+
+    def __init__(self, title, artist, genre):
+        self.title = title
+        self.artist = artist
+        self.genre = genre
+
+
+class Location(db.Model, SerializerMixin):
+    __tablename__ = 'locations'
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(300), nullable=True, unique=False)
+    longitude = db.Column(db.String(300), nullable=True, unique=False)
+    latitude = db.Column(db.String(300), nullable=True, unique=False)
+    population = db.Column(db.Integer, nullable=True, unique=False)
+
+
+    def __init__(self, title, longitude, latitude, population):
+        self.title = title
+        self.longitude = longitude
+        self.latitude = latitude
+        self.population = population
+
+    def serialize(self):
+        return {
+            'title': self.title,
+            'long': self.longitude,
+            'lat': self.latitude,
+            'population': self.population,
+        }
 
 
 
@@ -37,6 +84,8 @@ class User(UserMixin, db.Model):
     active = db.Column('is_active', db.Boolean(), nullable=False, server_default='1')
     is_admin = db.Column('is_admin', db.Boolean(), nullable=False, server_default='0')
     transactions = db.relationship("Transaction", back_populates="user", cascade="all, delete")
+    locations = db.relationship("Location", secondary=location_user, backref="users")
+    songs = db.relationship("Song", secondary=song_user, backref="users")
     # `roles` and `groups` are reserved words that *must* be defined
     # on the `User` model to use group- or role-based authorization.
 

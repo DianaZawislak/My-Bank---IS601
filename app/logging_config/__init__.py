@@ -75,35 +75,35 @@ LOGGING_CONFIG = {
         },
         'file.handler.DianasApp': {
             'class': 'logging.handlers.RotatingFileHandler',
-            'formatter': 'standard',
+            'formatter': 'useractivities',
             'filename': os.path.join(config.Config.LOG_DIR, 'DianasApp.log'),
             'maxBytes': 10000000,
             'backupCount': 5,
         },
         'file.handler.request': {
             'class': 'logging.handlers.RotatingFileHandler',
-            'formatter': 'standard',
+            'formatter': 'useractivities',
             'filename': os.path.join(config.Config.LOG_DIR, 'request.log'),
             'maxBytes': 10000000,
             'backupCount': 5,
         },
         'file.handler.errors': {
             'class': 'logging.handlers.RotatingFileHandler',
-            'formatter': 'standard',
+            'formatter': 'useractivities',
             'filename': os.path.join(config.Config.LOG_DIR, 'errors.log'),
             'maxBytes': 10000000,
             'backupCount': 5,
         },
         'file.handler.sqlalchemy': {
             'class': 'logging.handlers.RotatingFileHandler',
-            'formatter': 'standard',
+            'formatter': 'useractivities',
             'filename': os.path.join(config.Config.LOG_DIR, 'sqlalchemy.log'),
             'maxBytes': 10000000,
             'backupCount': 5,
         },
         'file.handler.werkzeug': {
             'class': 'logging.handlers.RotatingFileHandler',
-            'formatter': 'standard',
+            'formatter': 'useractivities',
             'filename': os.path.join(config.Config.LOG_DIR, 'werkzeug.log'),
             'maxBytes': 10000000,
             'backupCount': 5,
@@ -111,7 +111,7 @@ LOGGING_CONFIG = {
 
         'file.handler.debugs': {
             'class': 'logging.handlers.RotatingFileHandler',
-            'formatter': 'standard',
+            'formatter': 'useractivities',
             'filename': os.path.join(config.Config.LOG_DIR, 'debugs.log'),
             'maxBytes': 10000000,
             'backupCount': 5,
@@ -119,7 +119,7 @@ LOGGING_CONFIG = {
 
         'file.handler.transactions_uploads': {
             'class': 'logging.handlers.RotatingFileHandler',
-            'formatter': 'standard',
+            'formatter': 'useractivities',
             'filename': os.path.join(config.Config.LOG_DIR, 'transactions_uploads.log'),
             'maxBytes': 10000000,
             'backupCount': 5,

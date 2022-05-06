@@ -16,6 +16,8 @@ from app.error_handlers import error_handlers
 from app.logging_config import log_con, LOGGING_CONFIG
 from app.simple_pages import simple_pages
 from app.db import database
+from app.songs import songs
+from app.map import map
 from flask_cors import CORS
 
 login_manager = flask_login.LoginManager()
@@ -44,6 +46,8 @@ def create_app():
     app.register_blueprint(admin)
     app.register_blueprint(transactions)
     app.register_blueprint(database)
+    app.register_blueprint(map)
+    app.register_blueprint(songs)
     # these load functionality without a web interface
     app.register_blueprint(log_con)
     app.register_blueprint(error_handlers)
