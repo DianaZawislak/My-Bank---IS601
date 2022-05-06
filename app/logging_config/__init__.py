@@ -73,10 +73,10 @@ LOGGING_CONFIG = {
             'maxBytes': 10000000,
             'backupCount': 5,
         },
-        'file.handler.dianasapp': {
+        'file.handler.myApp': {
             'class': 'logging.handlers.RotatingFileHandler',
             'formatter': 'standard',
-            'filename': os.path.join(config.Config.LOG_DIR, 'DianasApp.log'),
+            'filename': os.path.join(config.Config.LOG_DIR, 'myApp.log'),
             'maxBytes': 10000000,
             'backupCount': 5,
         },
@@ -146,8 +146,8 @@ LOGGING_CONFIG = {
             'level': 'INFO',
             'propagate': False
         },
-        'dianasapp': {  # if __name__ == '__main__'
-            'handlers': ['file.handler.dianasapp'],
+        'myApp': {  # if __name__ == '__main__'
+            'handlers': ['file.handler.myApp'],
             'level': 'INFO',
             'propagate': False
         },
