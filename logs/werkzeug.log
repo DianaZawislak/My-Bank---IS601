@@ -5108,3 +5108,13 @@
 2022-05-06 01:01:22,428 [INFO] werkzeug: 192.168.112.1 - - [06/May/2022 01:01:22] "[36mGET /static/images/logo2.png HTTP/1.1[0m" 304 -
 2022-05-06 01:01:22,937 [INFO] werkzeug: 192.168.112.1 - - [06/May/2022 01:01:22] "GET /static/images/favicon.ico HTTP/1.1" 200 -
 2022-05-06 01:12:19,229 [INFO] werkzeug:  * Detected change in '/home/myuser/app/logging_config/__init__.py', reloading
+2022-05-06 14:31:50,543 [INFO] werkzeug: 172.28.0.1 - - [06/May/2022 14:31:50] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2022-05-06 14:31:50,568 [INFO] werkzeug: 172.28.0.1 - - [06/May/2022 14:31:50] "[35m[1mGET /login?next=%2Fdashboard&page=1 HTTP/1.1[0m" 500 -
+2022-05-06 14:31:50,591 [INFO] werkzeug: 172.28.0.1 - - [06/May/2022 14:31:50] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-05-06 14:31:50,592 [INFO] werkzeug: 172.28.0.1 - - [06/May/2022 14:31:50] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-05-06 14:31:50,607 [INFO] werkzeug: 172.28.0.1 - - [06/May/2022 14:31:50] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-05-06 14:31:59,556 [INFO] werkzeug: 172.28.0.1 - - [06/May/2022 14:31:59] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2022-05-06 14:31:59,574 [INFO] werkzeug: 172.28.0.1 - - [06/May/2022 14:31:59] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-05-06 14:31:59,574 [INFO] werkzeug: 172.28.0.1 - - [06/May/2022 14:31:59] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-05-06 14:31:59,586 [INFO] werkzeug: 172.28.0.1 - - [06/May/2022 14:31:59] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-05-06 14:31:59,599 [INFO] werkzeug: 172.28.0.1 - - [06/May/2022 14:31:59] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
