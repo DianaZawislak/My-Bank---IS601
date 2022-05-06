@@ -44,6 +44,7 @@ def transactions_upload():
         form.file.data.save(filepath)
         user = current_user
         list_of_transactions = []
+
         with open(filepath) as file:
             csv_file = csv.DictReader(file)
             for row in csv_file:

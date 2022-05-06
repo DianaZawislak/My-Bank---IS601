@@ -14,28 +14,34 @@ def utility_text_processors():
     message = "hello world"
     form = login_form()
 
-    def account_balance():
-
+    def user_balance():
         try:
             engine = sqlalchemy.create_engine("sqlite:////home/myuser/database/db2.sqlite")
             data = sqlalchemy.MetaData(bind=engine)
             sqlalchemy.MetaData.reflect(data)
             total = data.tables['transactions']
-            query = sqlalchemy.select(sqlalchemy.func.sum(total.c.amount))
+            query = sqlalchemy.select([sqlalchemy.func.round(sqlalchemy.func.sum(total.c.amount), 1)])
+            query = query.where(total.c.user_id == current_user.id)
             result = engine.execute(query).fetchall()
             currency = str(result[0])
             balance = currency[1:-2]
             return "${:,.2f}".format(float(balance))
         except:
-                return ("$0.00")
+            return ("$0.00")
 
-    def user_balance():
-        userid = current_user.id
-        user_trans = transactions.query.filter_by(user_id=userid).all()
-        total = 0
-        for trans in user_trans:
-            total += trans.amount
-        return "${:,.2f}".format(float(total))#
+    def account_balance():
+        try:
+            engine = sqlalchemy.create_engine("sqlite:////home/myuser/database/db2.sqlite")
+            data = sqlalchemy.MetaData(bind=engine)
+            sqlalchemy.MetaData.reflect(data)
+            total = data.tables['transactions']
+            query = sqlalchemy.select([sqlalchemy.func.round(sqlalchemy.func.sum(total.c.amount), 1)])
+            result = engine.execute(query).fetchall()
+            currency = str(result[0])
+            balance = currency[1:-2]
+            return "${:,.2f}".format(float(balance))
+        except:
+            return ("$0.00")
 
     def deployment_environment():
         return getenv('FLASK_ENV', None)
