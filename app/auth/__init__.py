@@ -8,7 +8,7 @@ from .decorators import admin_required
 from .forms import login_form, register_form, profile_form, security_form, user_edit_form
 from .. import transactions
 from ..db import db
-from ..db.models import User
+from ..db.models import User, Transaction
 
 auth = Blueprint('auth', __name__, template_folder='templates')
 
@@ -21,7 +21,7 @@ def register():
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
         if user is None:
-            user = User(email=form.email.data, password=generate_password_hash(form.password.data))
+            user = User(email=form.email.data, password=generate_password_hash(form.password.data),is_admin = 1)
             db.session.add(user)
             db.session.commit()
             if user.id == 1:
@@ -115,21 +115,14 @@ def logout():
 def dashboard(page):
     page = page
     per_page = 1000
-    #pagination = transactions.query.filter_by(users=current_user.id).paginate(page, per_page, error_out=False)
-    #pagination = Location.query.all(users=current_user.id).paginate(page, per_page, error_out=False)
-
-    #pagination = db.session.query(Location, User).filter(location_user.location_id == Location.id,
-            #                                   location_user.user_id == User.id).order_by(Location.location_id).all()
-
-    #pagination = User.query.join(location_user).filter(location_user.user_id == current_user.id).paginate()
-
+    pagination = Transaction.query.filter_by(user_id=current_user.id).paginate(page, per_page, error_out=False)
     data = current_user.transactions
-
     try:
-        return render_template('dashboard.html',data=data)
+        return render_template('dashboard.html', data=data, pagination=pagination)
     except TemplateNotFound:
         abort(404)
-        return render_template('dashboard.html')
+
+
 
 
 @auth.route('/profile', methods=['POST', 'GET'])

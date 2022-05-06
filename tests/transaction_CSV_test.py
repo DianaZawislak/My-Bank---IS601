@@ -18,37 +18,36 @@ def test_upload_dir():
     assert os.path.exists(uploaddir)
 
 
-def test_upload_csv():
-    '''Tests for csv file creation/existence'''
-    fields = ['AMOUNT', 'TYPE', 'BALANCE']
-    rows = [['2000', 'DEBIT', '0']]
+def test_if_file_uploads(application, test_user):
+    with application.app_context():
+        assert db.session.query(User).count() == 1
+        assert db.session.query(Transaction).count() == 0
+    root = config.Config.BASE_DIR
+    csv_file = 'transactions.csv'
+    filepath = root + '/..app/uploads/' + csv_file
+    uploadfolder = config.Config.UPLOAD_FOLDER
+    file_upload = os.path.join(uploadfolder, csv_file)
+    assert os.path.exists(file_upload) == True
 
-    with open(test_file, 'w') as csvfile:
-        csvwriter = csv.writer(csvfile)
-        csvwriter.writerow(fields)
-        csvwriter.writerows(rows)
 
-    assert os.path.exists(test_file)
-
-
-def test_csv_processed(application):
+def test_csv_processed(application, list_of_transactions=None):
     '''Tests processing of CSV'''
-    # Creates db and test user to associate w/ song db
+    # Creates db and test user to associate with transaction db
     with application.app_context():
         db.create_all()
         user = User('test@test.com', 'testtest')
         db.session.add(user)
         list_of_songs = []
-        # Loads CSV data to db
+        # CSV data is loaded to db
         with open(test_file) as file:
             csv_file = csv.DictReader(file)
             for row in csv_file:
-                list_of_songs.append(Transaction(row['AMOUNT'], row['TYPE'], row['BALANCE']))
-        user.songs = list_of_songs
+                list_of_transactions.append(Transaction(row['AMOUNT'], row['TYPE']))
+        user.transactions = list_of_songs
         db.session.commit()
         # Tests CSV data was successfully loaded to db
-        test_song = Transaction.query.filter_by(title='California Love').first()
-        assert test_song.title == 'California Love'
+        test_transaction = Transaction.query.filter_by(id='1').first()
+        assert test_transaction.id == '1'
         # Breaks down test user and confirms db is empty
         db.session.delete(user)
         assert db.session.query(User).count() == 0

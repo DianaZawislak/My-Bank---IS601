@@ -1,4 +1,4 @@
-'''Testing of log in function'''
+'''Testing of log in  and logout function'''
 
 from werkzeug.security import generate_password_hash
 
@@ -6,29 +6,23 @@ from app import db
 from app.db.models import User
 
 
-user = User('diana@test.com', generate_password_hash('diana123'))
-data = {'email': 'diana@test.com', 'password': 'diana123'}
-
-
 def test_login(client, application):
-    '''Tests login and auto navigation to dashboard'''
-    #Test user injected into db - this persists through rest of the testing in this file
-    with application.app_context():
-        db.session.add(user)
-        db.session.commit()
-        assert db.session.query(User).count() == 1
-        response = client.post('/login', data=data, follow_redirects=True)
-        assert response.status_code == 200
-        #Successful log in routes to dashboard page
-        assert b"Dashboard" in response.data
+    response = client.post('/login', data={
+        'email': 'diana@test.com',
+        'password': 'testtest',
+    }, follow_redirects=True)
+    #if login succesfull user is redirected to index page(home)
+    assert response.status_code == 200
+    assert response.request.path == '/index'
+    html = response.get_data(as_text=True)
+    assert '<p class="text-light pb-3"> Let us help you and your family become financially independent</p>' in html
 
-def test_logout(client, test_user):
-    # pylint: disable=unused-argument,redefined-outer-name
-        response = client.get('/logout')
-        # go to index if logged in
-        assert response.status_code == 302
-        assert b'login' in response.data
-        assert test_user.is_authenticated() == False
+
+def test_logout(client, application):
+    """This tests the logout """
+    response = client.get("/logout", follow_redirects=True)
+    assert response.status_code == 200
+    assert b"<h2>Login</h2>" in response.data
 
 
 
