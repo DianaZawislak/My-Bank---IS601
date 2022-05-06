@@ -7,7 +7,27 @@ font-size: 100%;
     height: 100%;
     margin: 0;
     background-attachment: fixed;
+
 }
+body {
+  height:75%;
+}
+.container {
+  height: 75%;
+}
+
+/*----body {
+font-size: 100%;
+    background-image: url(../images/bankb.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    margin: 3px;
+    background-attachment: fixed;
+    background-color: rgba(192,192,192,0.3);
+    background-blend-mode: darken;
+;
+} ---*/
 
 
 /*------------------------------ Navbar Custom -------------------------------*/
@@ -100,5 +120,45 @@ a {
 .p1 {
     text-align: center;
     color: #989898;
+}
+
+
+/*----------------------BUTTONS------------------------------*/
+
+.btn-primary:hover {
+    background-image: linear-gradient(grey, grey, #2204cc)!important;
+    -webkit-filter: none!important;
+    filter: none!important;
+    border: 1px solid grey!important;
+}
+
+.btn-primary {
+    background-image: linear-gradient(#2204cc, #2204cc, grey ) !important;
+    -webkit-filter: none!important;
+    filter: none!important;
+    border: 1px solid #2204cc!important;
+}
+
+.btn-info {
+    color: #000;
+    background-color: #2204cc !important;
+    border-color: #2204cc!important;
+}
+
+/*-------------------------CARDS-----------------------------------*/
+
+.card-body {
+    background-image: linear-gradient(to bottom right, #808080, #f2f3f4) !important;
+}
+
+.carousel-item> img {
+  width:auto !important;
+  height:450px !important;
+
 
 }
+
+.dataTables_lenght {
+    width: 50% !important;
+}
+

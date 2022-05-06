@@ -133,3 +133,18 @@
 2022-04-30 19:47:38,246 [INFO] myerrors: This has broken
 2022-04-30 19:47:38,249 [DEBUG] myerrors: Debug Logger
 2022-04-30 19:47:38,265 [WARNING] myerrors: warning
+2022-04-30 20:01:29,073 [INFO] myerrors: This has broken
+2022-04-30 20:01:29,075 [DEBUG] myerrors: Debug Logger
+2022-04-30 20:01:29,077 [WARNING] myerrors: warning
+2022-04-30 20:04:39,586 [INFO] myerrors: This has broken
+2022-04-30 20:04:39,588 [DEBUG] myerrors: Debug Logger
+2022-04-30 20:04:39,591 [WARNING] myerrors: warning
+2022-04-30 20:09:52,834 [INFO] myerrors: This has broken
+2022-04-30 20:09:52,835 [DEBUG] myerrors: Debug Logger
+2022-04-30 20:09:52,839 [WARNING] myerrors: warning
+2022-04-30 20:17:49,137 [INFO] myerrors: This has broken
+2022-04-30 20:17:49,141 [DEBUG] myerrors: Debug Logger
+2022-04-30 20:17:49,143 [WARNING] myerrors: warning
+2022-04-30 20:31:06,548 [INFO] myerrors: This has broken
+2022-04-30 20:31:06,550 [DEBUG] myerrors: Debug Logger
+2022-04-30 20:31:06,553 [WARNING] myerrors: warning

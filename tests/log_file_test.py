@@ -3,52 +3,72 @@
 import os
 
 root = os.path.dirname(os.path.abspath(__file__))
-logdir = os.path.join(root, '../app/logs')
+logdir = os.path.join(root, '../logs')
 
 
-def test_errors_logfiles():
-    assert os.path.exists(logdir) is True
-    logfile = os.path.join(root, '../app/logs/errors.log')
-    assert os.path.exists(logfile) is True
-
-
-def test_flask_logfiles():
-    assert os.path.exists(logdir) is True
-    logfile = os.path.join(root, '../app/logs/flask.log')
-    assert os.path.exists(logfile) is True
-
-
-def test_myapp_logfiles():
-    assert os.path.exists(logdir) is True
-    logfile = os.path.join(root, '../app/logs/myapp.log')
-    assert os.path.exists(logfile) is True
+def test_error_logfiles():
+    logfile = os.path.join(logdir, 'errors.log')
+    if not os.path.exists(logfile):
+        f = open(logfile, 'w')
+        f.close()
+    assert os.path.exists(logfile) == True
 
 
 def test_request_logfiles():
-    assert os.path.exists(logdir) is True
-    logfile = os.path.join(root, '../app/logs/request.log')
-    assert os.path.exists(logfile) is True
+    logfile = os.path.join(logdir, 'request.log')
+    if not os.path.exists(logfile):
+        f = open(logfile, 'w')
+        f.close()
+    assert os.path.exists(logfile) == True
 
 
 def test_sqlalchemy_logfiles():
-    assert os.path.exists(logdir) is True
-    logfile = os.path.join(root, '../app/logs/sqlalchemy.log')
-    assert os.path.exists(logfile) is True
+    logfile = os.path.join(logdir, 'sqlalchemy.log')
+    if not os.path.exists(logfile):
+        f = open(logfile, 'w')
+        f.close()
+    assert os.path.exists(logfile) == True
 
 
 def test_werkzeug_logfiles():
-    assert os.path.exists(logdir) is True
-    logfile = os.path.join(root, '../app/logs/werkzeug.log')
-    assert os.path.exists(logfile) is True
+    logfile = os.path.join(logdir, 'werkzeug.log')
+    if not os.path.exists(logfile):
+        f = open(logfile, 'w')
+        f.close()
+    assert os.path.exists(logfile) == True
 
 
 def test_debug_logfiles():
-    assert os.path.exists(logdir) is True
-    logfile = os.path.join(root, '../app/logs/debug.log')
-    assert os.path.exists(logfile) is True
+    logfile = os.path.join(logdir, 'debugs.log')
+    if not os.path.exists(logfile):
+        f = open(logfile, 'w')
+        f.close()
+    assert os.path.exists(logfile) == True
 
 
-def test_dianasapp_logfiles():
-    assert os.path.exists(logdir) is True
-    logfile = os.path.join(root, '../app/logs/dianasapp.log')
-    assert os.path.exists(logfile) is True
+def test_song_uploads_logfiles():
+    logfile = os.path.join(logdir, 'song_uploads.log')
+    if not os.path.exists(logfile):
+        f = open(logfile, 'w')
+        f.close()
+    assert os.path.exists(logfile) == True
+
+
+def test_useractivities_logfiles():
+    logfile = os.path.join(logdir, 'useractivities.log')
+    if not os.path.exists(logfile):
+        f = open(logdir, 'useractivities')
+        f.close()
+    assert os.path.exists(logfile) == True
+
+def test_DianasApp_logfiles():
+    logfile = os.path.join(logdir, 'DianasApp.log')
+    if not os.path.exists(logfile):
+        f = open(logfile, 'w')
+        f.close()
+    assert os.path.exists(logfile) == True
+
+# def test_dianasapp_logfiles():
+#   assert os.path.exists(logdir) is True
+#  logfile = os.path.join(root, '../app/logs/dianasapp.log')
+#  assert os.path.exists(logfile) is True

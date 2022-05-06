@@ -1,66 +1,46 @@
 import logging
+import os
 from logging.config import dictConfig
 
 import flask
 from flask import request, current_app
+from flask_login import current_user
 
 from app.logging_config.log_formatters import RequestFormatter
+from app.logging_config.log_formatters import useractivities
+from app import config
 
 log_con = flask.Blueprint('log_con', __name__)
 
 
-@log_con.before_app_request
-def before_request_logging():
-    current_app.logger.info("Before Request")
-    log = logging.getLogger("myApp")
-    log.info("My App Logger")
-    log = logging.getLogger("mydebugs")
-    log.debug("Debug Logger")
-    log = logging.getLogger("myrequests")
-    log.info("Request Logger")
+# @log_con.before_app_request
+# def before_request_logging():
+#@log_con.after_app_request
+
+def after_request_transactions_upload():
+    log = logging.getLogger('transactions_uploads')
+    log.info(current_user.email + "  uploaded new transactions")
+
 
 @log_con.after_app_request
 def after_request_logging(response):
-    if request.path == '/logo.png':
+    if request.path == '/favicon.ico':
         return response
     elif request.path.startswith('/static'):
         return response
     elif request.path.startswith('/bootstrap'):
         return response
-    current_app.logger.info("After Request")
-
-    log = logging.getLogger("myApp")
-    log.info("My App Logger")
-    log = logging.getLogger("mydebugs")
-    log.debug("Debug Logger")
-    log = logging.getLogger("myrequests")
-    log.info("Request Logger")
     return response
 
 
 @log_con.before_app_first_request
-def configure_logging():
+def setup_logs():
+    # set the name of the apps log folder to logs
+    logdir = config.Config.LOG_DIR
+    # make a directory if it doesn't exist
+    if not os.path.exists(logdir):
+        os.mkdir(logdir)
     logging.config.dictConfig(LOGGING_CONFIG)
-    log = logging.getLogger("myApp")
-    log.info("My App Logger")
-    log.debug("Debug Logger")
-    log = logging.getLogger("myerrors")
-    log.info("This has broken")
-    log.debug("Debug Logger")
-    log.warning('warning')
-    log = logging.getLogger("mydebugs")
-    log.debug("Debug Logger")
-    log.info("My App Logger")
-    log = logging.getLogger("myrequests")
-    log.info("Request Logger")
-    log.debug("Debug Logger")
-    log = logging.getLogger("dianasApp")
-    log.info("Request Logger")
-    log.debug("Debug Logger")
-    log.warning("WARNING")
-    log.critical("CRITICAL")
-
-
 
 
 LOGGING_CONFIG = {
@@ -70,90 +50,95 @@ LOGGING_CONFIG = {
         'standard': {
             'format': '%(asctime)s [%(levelname)s] %(name)s: %(message)s'
         },
-        'RequestFormatter': {
-            '()': 'app.logging_config.log_formatters.RequestFormatter',
-            'format': '[%(asctime)s] [%(process)d] %(remote_addr)s requested %(url)s'
-                        '%(levelname)s in %(module)s: %(message)s'
-        },
+
+        'useractivities': {
+            '()': 'app.logging_config.log_formatters.useractivities',
+            'format': '[%(asctime)s] %(levelname)s METHOD: %(request_method)s '
+                      'FILENAME:%(filename)s FUNCTION NAME:%(funcName)s() LINE:%(lineno)s] '
+                      '%(message)s from %(remote_addr)s'
+        }
+
     },
     'handlers': {
         'default': {
-            'level': 'DEBUG',
-            'formatter': 'standard',
+            'level': 'INFO',
+            'formatter': 'useractivities',
             'class': 'logging.StreamHandler',
             'stream': 'ext://sys.stdout',  # Default is stderr
         },
         'file.handler': {
             'class': 'logging.handlers.RotatingFileHandler',
-            'formatter': 'standard',
-            'filename': 'app/logs/flask.log',
+            'formatter': 'useractivities',
+            'filename': os.path.join(config.Config.LOG_DIR, 'useractivities.log'),
             'maxBytes': 10000000,
             'backupCount': 5,
         },
-        'file.handler.myapp': {
+        'file.handler.myApp': {
             'class': 'logging.handlers.RotatingFileHandler',
-            'formatter': 'RequestFormatter',
-            'filename': 'app/logs/myapp.log',
+            'formatter': 'standard',
+            'filename': os.path.join(config.Config.LOG_DIR, 'myApp.log'),
             'maxBytes': 10000000,
             'backupCount': 5,
         },
         'file.handler.request': {
             'class': 'logging.handlers.RotatingFileHandler',
-            'formatter': 'RequestFormatter',
-            'filename': 'app/logs/request.log',
+            'formatter': 'standard',
+            'filename': os.path.join(config.Config.LOG_DIR, 'request.log'),
             'maxBytes': 10000000,
             'backupCount': 5,
         },
         'file.handler.errors': {
             'class': 'logging.handlers.RotatingFileHandler',
             'formatter': 'standard',
-            'filename': 'app/logs/errors.log',
+            'filename': os.path.join(config.Config.LOG_DIR, 'errors.log'),
             'maxBytes': 10000000,
             'backupCount': 5,
         },
         'file.handler.sqlalchemy': {
             'class': 'logging.handlers.RotatingFileHandler',
             'formatter': 'standard',
-            'filename': 'app/logs/sqlalchemy.log',
+            'filename': os.path.join(config.Config.LOG_DIR, 'sqlalchemy.log'),
             'maxBytes': 10000000,
             'backupCount': 5,
         },
         'file.handler.werkzeug': {
             'class': 'logging.handlers.RotatingFileHandler',
             'formatter': 'standard',
-            'filename': 'app/logs/werkzeug.log',
+            'filename': os.path.join(config.Config.LOG_DIR, 'werkzeug.log'),
             'maxBytes': 10000000,
             'backupCount': 5,
         },
-        'file.handler.debug': {
+
+        'file.handler.debugs': {
             'class': 'logging.handlers.RotatingFileHandler',
             'formatter': 'standard',
-            'filename': 'app/logs/debug.log',
+            'filename': os.path.join(config.Config.LOG_DIR, 'debugs.log'),
             'maxBytes': 10000000,
             'backupCount': 5,
         },
-        'file.handler.dianasapp': {
+
+        'file.handler.transactions_uploads': {
             'class': 'logging.handlers.RotatingFileHandler',
-            'formatter': 'RequestFormatter',
-            'filename': 'app/logs/dianasapp.log',
+            'formatter': 'standard',
+            'filename': os.path.join(config.Config.LOG_DIR, 'transactions_uploads.log'),
             'maxBytes': 10000000,
             'backupCount': 5,
         },
     },
     'loggers': {
         '': {  # root logger
-            'handlers': ['default','file.handler'],
-            'level': 'DEBUG',
+            'handlers': ['default', 'file.handler'],
+            'level': 'INFO',
             'propagate': True
         },
         '__main__': {  # if __name__ == '__main__'
-            'handlers': ['default','file.handler'],
-            'level': 'DEBUG',
+            'handlers': ['default', 'file.handler'],
+            'level': 'INFO',
             'propagate': True
         },
         'werkzeug': {  # if __name__ == '__main__'
             'handlers': ['file.handler.werkzeug'],
-            'level': 'DEBUG',
+            'level': 'INFO',
             'propagate': False
         },
         'sqlalchemy.engine': {  # if __name__ == '__main__'
@@ -162,18 +147,13 @@ LOGGING_CONFIG = {
             'propagate': False
         },
         'myApp': {  # if __name__ == '__main__'
-            'handlers': ['file.handler.myapp'],
-            'level': 'DEBUG',
+            'handlers': ['file.handler.myApp'],
+            'level': 'INFO',
             'propagate': False
         },
         'myerrors': {  # if __name__ == '__main__'
             'handlers': ['file.handler.errors'],
-            'level': 'DEBUG',
-            'propagate': False
-        },
-        'mydebugs': {  # if __name__ == '__main__'
-            'handlers': ['file.handler.debug'],
-            'level': 'DEBUG',
+            'level': 'INFO',
             'propagate': False
         },
         'myrequests': {  # if __name__ == '__main__'
@@ -181,10 +161,17 @@ LOGGING_CONFIG = {
             'level': 'DEBUG',
             'propagate': False
         },
-        'dianasApp': {  # if __name__ == '__main__'
-            'handlers': ['file.handler.dianasapp'],
-            'level': 'DEBUG',
+        'mydebugs': {  # if __name__ == '__main__'
+            'handlers': ['file.handler.debugs'],
+            'level': 'INFO',
             'propagate': False
         },
-},
+
+        'transactions_uploads': {  # if __name__ == '__main__'
+            'handlers': ['file.handler.transactions_uploads'],
+            'level': 'INFO',
+            'propagate': False
+        },
+
+    }
 }

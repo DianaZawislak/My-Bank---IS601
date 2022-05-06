@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     <main>
-        <div id="myCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+        <div id="myCarousel" class="carousel slide mb-3" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
                         aria-label="surf"></button>
@@ -59,42 +59,63 @@
                 </button>
             </div>
         </div>
-        <div class="container col-xxl-8">
-            <div class="row featurette  d-flex align-items-center">
-                <div class="col-md-7 order-md-2">
-                    <h2 class="fw-bold lh-1 mb-3">Project Outline</h2>
-                    <p class="lead">
+        <div>
 
-                    </p>
-                </div>
-                <div class="col-md-5">
-                    <img src="{{ url_for('static', filename='images/') }}"
-                         class="img-fluid  mb-4" alt="Team" width="375" height="150"
-                         loading="lazy">
+            <h2 class="mb-3 text-center">Wherever you want to go, we'll help you get there</h2>
+
+            <h3 class="text-center text-muted">No matter where you are on your journey we've got financial products and
+                services to help you.</h3>
+            <br>
+
+            <h2 class="mb-3 text-center">We're with you every step of the way</h2>
+
+
+            <h3 class="text-center text-muted">Whether you're down the street from us or across the country,
+                we help make managing your money easy.</h3>
+        </div>
+        <div class="row justify-content-center mt-2">
+            <div class="col-4">
+                <div class="card" style="width: auto;">
+                    <div class="card-body">
+                        <h5 class="card-title">CHECKING</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Checking Accounts for everyone</h6>
+                        <p class="card-text">Explore our checking options and find one that suits your everyday banking
+                            needs<br><br>Choose the account that includes the perks you want</p>
+
+                    </div>
                 </div>
             </div>
-            <hr class="featurette-divider">
-        </div>
-        <div class="container col-xxl-8">
-            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-                <div class="col-10 col-sm-8 col-lg-5">
-                    <img src="{{ url_for('static', filename='images/') }}"
-                         class="d-block mx-lg-auto img-fluid" alt=""
-                         width="300" height="300" loading="lazy">
-                </div>
-                <div class="col-lg-7">
-                    <h2 class="fw-bold lh-1 mb-3">about me</h2>
-                    <p class="lead">
+            <div class="col-4">
+                <div class="card" style="width: auto;">
+                    <div class="card-body">
+                        <h5 class="card-title">SAVINGS</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Savings Accounts for everyone</h6>
+                        <p class="card-text">Choose a savings account to set aside funds for a special purchase or rainy
+                            day<br> <br> We offer broad array of options</p>
 
-                    </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: auto;">
+                    <div class="card-body">
+                        <h5 class="card-title">ABOUT THIS PROJECT</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Find out more</h6>
+                        <p class="card-text">Explore details of this project as well as information about the author and
+                            other projects</p>
+                        <a href="/about" class="card-link">About</a>
+
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <hr class="featurette-divider">
-        </div>
+        <br>
+        <br>
+
 
     </main>
+
+
 
 {% endblock %}
 

@@ -1,0 +1,8 @@
+AMOUNT,TYPE
+1000,credit
+2000,debit
+-1000,credit
+-500,credit
+3000,debit
+200,credit
+1000,debit
