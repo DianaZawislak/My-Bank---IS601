@@ -46,12 +46,26 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <div class="navbar-nav mr-auto">
                     {{ render_nav_item('auth.index', 'Home') }}
+                    {{ render_nav_item('simple_pages.about','About') }}
                         {% if current_user.is_authenticated %}
-                            {{ render_nav_item('auth.dashboard','Dashboard' ) }}
-                        {% else %}-
+                            <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                My Dashboard
+                            </a>
+
+                            <ul class="dropdown-menu " aria-labelledby="navbarDarkDropdownMenuLink">
+
+
+                                <li><a class="dropdown-item" href="{{ url_for("auth.dashboard") }}">Transactions</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for("songs.songs_browse") }}">Songs</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for("map.browse_locations") }}">Locations</a>
+                                <li><a class="dropdown-item" href="{{ url_for("map.map_locations") }}">Map</a>
+                                </li>
+                        {% else %}
 
                         {% endif %}
-                        {{ render_nav_item('simple_pages.about','About') }}
+
 
 
                     </div>
@@ -67,12 +81,9 @@
                             <ul class="dropdown-menu " aria-labelledby="navbarDarkDropdownMenuLink">
 
 
-                                <li><a class="dropdown-item" href="{{ url_for("auth.edit_profile") }}">Manage
-                                    Profile</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for("auth.edit_account") }}">Manage
-                                    Account</a></li>
-                                <li><a class="dropdown-item" href="{{ url_for("transactions.transactions_browse") }}">Transactions Mgmt</a>
-                                </li>
+                                <li><a class="dropdown-item" href="{{ url_for("auth.edit_profile") }}">Manage Profile</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for("auth.edit_account") }}">Manage Account</a></li>
+                                <li><a class="dropdown-item" href="{{ url_for("transactions.transactions_browse") }}">Transactions Mgmt</a></li>
 
 
 

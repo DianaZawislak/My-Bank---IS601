@@ -29,7 +29,7 @@ def register():
                 db.session.add(user)
                 db.session.commit()
             flash('Congratulations !!! You are successfully registered, please log in', 'success')
-           # flash('Congratulations, you are now a registered user, please', <a href="{{ url_for('auth.login', page="login_form")}}">log in</a>., "success")
+            current_app.logger.info("New User" + user.email + "registered")
             return redirect(url_for('auth.register_login'), 302)
         else:
             flash('Already Registered')
@@ -52,6 +52,7 @@ def register_login():
             db.session.commit()
             login_user(user)
             flash("Welcome", 'success')
+            current_app.logger.info("Existing User " + user.email + " Logged In")
             return redirect(url_for('auth.index'))
     return render_template('register_login.html', form=form)
 def register1():
@@ -69,7 +70,7 @@ def register1():
                 db.session.add(user)
                 db.session.commit()
                 flash('Congratulations !!! You are successfully registered, please log in', 'success')
-            # flash('Congratulations, you are now a registered user, please', <a href="{{ url_for('auth.login', page="login_form")}}">log in</a>., "success")
+
             return redirect(url_for('auth.register_login'), 302)
         else:
                 flash('Already Registered')
@@ -93,6 +94,7 @@ def login():
             db.session.commit()
             login_user(user)
             flash("Welcome", 'success')
+            current_app.logger.info("Existing User " + user.email + " Logged In")
             return redirect(url_for('auth.index'))
     return render_template('login.html', form=form)
 
@@ -105,7 +107,8 @@ def logout():
     db.session.add(user)
     db.session.commit()
     logout_user()
-    return redirect(url_for('auth.login'))
+    flash("You have succesfully logged out", 'success')
+    return redirect(url_for('auth.index'))
 
 
 
@@ -150,6 +153,10 @@ def edit_account():
         flash('You Successfully Updated your Password or Email', 'success')
         return redirect(url_for('auth.dashboard'))
     return render_template('manage_account.html', form=form)
+
+
+
+
 
 @auth.route('/home')
 def index():

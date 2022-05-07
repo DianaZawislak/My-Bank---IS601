@@ -34,7 +34,7 @@ def browse_locations_datatables():
     data = Location.query.all()
 
     try:
-        return render_template('browse_locations_datatables.html',data=data)
+        return render_template('browse_locations.html',data=data)
     except TemplateNotFound:
         abort(404)
 
