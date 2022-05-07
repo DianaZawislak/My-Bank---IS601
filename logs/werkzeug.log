@@ -1,0 +1,105 @@
+2022-05-06 21:32:09,327 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:32:09] "[35m[1mGET /register?page=Register HTTP/1.1[0m" 500 -
+2022-05-06 21:32:09,340 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:32:09] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-05-06 21:32:09,341 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:32:09] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-05-06 21:32:09,351 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:32:09] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-05-06 21:32:09,361 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:32:09] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-05-06 21:32:10,255 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:32:10] "[35m[1mGET /register?page=Register HTTP/1.1[0m" 500 -
+2022-05-06 21:32:10,268 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:32:10] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-05-06 21:32:10,268 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:32:10] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-05-06 21:32:10,277 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:32:10] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-05-06 21:32:10,287 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:32:10] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-05-06 21:32:10,601 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:32:10] "[35m[1mGET /register?page=Register HTTP/1.1[0m" 500 -
+2022-05-06 21:32:10,614 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:32:10] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-05-06 21:32:10,614 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:32:10] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-05-06 21:32:10,623 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:32:10] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-05-06 21:32:10,633 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:32:10] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-05-06 21:32:10,879 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:32:10] "[35m[1mGET /register?page=Register HTTP/1.1[0m" 500 -
+2022-05-06 21:32:10,892 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:32:10] "[36mGET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2022-05-06 21:32:10,892 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:32:10] "[36mGET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2022-05-06 21:32:10,902 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:32:10] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-05-06 21:32:10,911 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:32:10] "[36mGET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2022-05-06 21:34:06,403 [INFO] werkzeug:  * Detected change in '/home/myuser/app/logging_config/__init__.py', reloading
+2022-05-06 21:34:08,384 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:08] "GET /register?page=Register HTTP/1.1" 200 -
+2022-05-06 21:34:08,405 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:08] "GET /static/css/style.css HTTP/1.1" 200 -
+2022-05-06 21:34:08,405 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:08] "[36mGET /static/images/logo2.png HTTP/1.1[0m" 304 -
+2022-05-06 21:34:08,430 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:08] "[36mGET /static/images/favicon.ico HTTP/1.1[0m" 304 -
+2022-05-06 21:34:17,332 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:17] "[32mPOST /register?page=Register HTTP/1.1[0m" 302 -
+2022-05-06 21:34:17,350 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:17] "GET /register_login HTTP/1.1" 200 -
+2022-05-06 21:34:17,374 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:17] "[36mGET /static/images/logo2.png HTTP/1.1[0m" 304 -
+2022-05-06 21:34:17,374 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:17] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2022-05-06 21:34:17,376 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-06 21:34:30,464 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:30] "[32mPOST /register_login HTTP/1.1[0m" 302 -
+2022-05-06 21:34:30,490 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:30] "GET /home HTTP/1.1" 200 -
+2022-05-06 21:34:30,512 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:30] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-06 21:34:30,513 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:30] "[36mGET /static/images/logo2.png HTTP/1.1[0m" 304 -
+2022-05-06 21:34:30,514 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:30] "[36mGET /static/images/bank2.jpg HTTP/1.1[0m" 304 -
+2022-05-06 21:34:30,514 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:30] "[36mGET /static/images/bank4.jpg HTTP/1.1[0m" 304 -
+2022-05-06 21:34:30,515 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:30] "[36mGET /static/images/bank1.jpg HTTP/1.1[0m" 304 -
+2022-05-06 21:34:36,955 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:36] "GET /transactions HTTP/1.1" 200 -
+2022-05-06 21:34:36,978 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:36] "[36mGET /static/images/logo2.png HTTP/1.1[0m" 304 -
+2022-05-06 21:34:36,979 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:36] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-06 21:34:36,979 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:36] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2022-05-06 21:34:38,621 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:38] "GET /transactions/upload HTTP/1.1" 200 -
+2022-05-06 21:34:38,638 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:38] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-06 21:34:38,639 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:38] "[36mGET /static/images/logo2.png HTTP/1.1[0m" 304 -
+2022-05-06 21:34:45,087 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:45] "[32mPOST /transactions/upload HTTP/1.1[0m" 302 -
+2022-05-06 21:34:45,165 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:45] "GET /transactions HTTP/1.1" 200 -
+2022-05-06 21:34:45,188 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:45] "[36mGET /static/images/logo2.png HTTP/1.1[0m" 304 -
+2022-05-06 21:34:45,188 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:45] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2022-05-06 21:34:45,189 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:45] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-06 21:34:52,447 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:52] "GET /dashboard HTTP/1.1" 200 -
+2022-05-06 21:34:52,468 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-06 21:34:52,470 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:52] "[36mGET /static/images/logo2.png HTTP/1.1[0m" 304 -
+2022-05-06 21:34:52,475 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:34:52] "GET /static/images/bank7.png HTTP/1.1" 200 -
+2022-05-06 21:37:10,874 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:37:10] "GET /about HTTP/1.1" 200 -
+2022-05-06 21:37:10,899 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:37:10] "[36mGET /static/images/njit.jpg HTTP/1.1[0m" 304 -
+2022-05-06 21:37:10,900 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:37:10] "[36mGET /static/images/me.png HTTP/1.1[0m" 304 -
+2022-05-06 21:37:10,900 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:37:10] "[36mGET /static/images/logo2.png HTTP/1.1[0m" 304 -
+2022-05-06 21:37:10,900 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:37:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-06 21:50:40,176 [INFO] werkzeug:  * Detected change in '/home/myuser/app/auth/__init__.py', reloading
+2022-05-06 21:50:44,085 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:50:44] "[32mGET /logout HTTP/1.1[0m" 302 -
+2022-05-06 21:50:44,176 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:50:44] "GET /login HTTP/1.1" 200 -
+2022-05-06 21:50:44,195 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:50:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-06 21:50:44,196 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:50:44] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2022-05-06 21:50:46,352 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:50:46] "GET /register?page=Register HTTP/1.1" 200 -
+2022-05-06 21:50:46,373 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:50:46] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-06 21:50:46,373 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:50:46] "[36mGET /static/images/logo2.png HTTP/1.1[0m" 304 -
+2022-05-06 21:50:55,618 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:50:55] "[32mPOST /register?page=Register HTTP/1.1[0m" 302 -
+2022-05-06 21:50:55,635 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:50:55] "GET /register_login HTTP/1.1" 200 -
+2022-05-06 21:50:55,656 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:50:55] "[36mGET /static/images/logo2.png HTTP/1.1[0m" 304 -
+2022-05-06 21:50:55,657 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:50:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-06 21:50:55,657 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:50:55] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2022-05-06 21:51:11,268 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:51:11] "[32mPOST /register_login HTTP/1.1[0m" 302 -
+2022-05-06 21:51:11,294 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:51:11] "GET /home HTTP/1.1" 200 -
+2022-05-06 21:51:11,319 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:51:11] "[36mGET /static/images/bank1.jpg HTTP/1.1[0m" 304 -
+2022-05-06 21:51:11,319 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:51:11] "[36mGET /static/images/bank4.jpg HTTP/1.1[0m" 304 -
+2022-05-06 21:51:11,320 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:51:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-06 21:51:11,321 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:51:11] "[36mGET /static/images/bank2.jpg HTTP/1.1[0m" 304 -
+2022-05-06 21:51:11,321 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:51:11] "[36mGET /static/images/logo2.png HTTP/1.1[0m" 304 -
+2022-05-06 21:51:17,947 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:51:17] "GET /dashboard HTTP/1.1" 200 -
+2022-05-06 21:51:17,969 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:51:17] "[36mGET /static/images/logo2.png HTTP/1.1[0m" 304 -
+2022-05-06 21:51:17,970 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:51:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-06 21:51:17,973 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:51:17] "[36mGET /static/images/bank7.png HTTP/1.1[0m" 304 -
+2022-05-06 21:51:20,877 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:51:20] "GET /transactions HTTP/1.1" 200 -
+2022-05-06 21:51:20,899 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:51:20] "[36mGET /static/images/logo2.png HTTP/1.1[0m" 304 -
+2022-05-06 21:51:20,899 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:51:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2022-05-06 21:51:20,899 [INFO] werkzeug: 192.168.0.1 - - [06/May/2022 21:51:20] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2022-05-06 21:52:58,459 [INFO] werkzeug:  * Detected change in '/home/myuser/app/logging_config/__init__.py', reloading
+[2022-05-06 22:00:28,878] INFO METHOD: GET FILENAME:_internal.py FUNCTION NAME:_log() LINE:224] 192.168.0.1 - - [06/May/2022 22:00:28] "%s" %s %s from 192.168.0.1
+[2022-05-06 22:00:28,892] INFO METHOD: GET FILENAME:_internal.py FUNCTION NAME:_log() LINE:224] 192.168.0.1 - - [06/May/2022 22:00:28] "%s" %s %s from 192.168.0.1
+[2022-05-06 22:00:28,908] INFO METHOD: GET FILENAME:_internal.py FUNCTION NAME:_log() LINE:224] 192.168.0.1 - - [06/May/2022 22:00:28] "%s" %s %s from 192.168.0.1
+[2022-05-06 22:00:28,919] INFO METHOD: GET FILENAME:_internal.py FUNCTION NAME:_log() LINE:224] 192.168.0.1 - - [06/May/2022 22:00:28] "%s" %s %s from 192.168.0.1
+[2022-05-06 22:01:00,376] INFO METHOD: GET FILENAME:_internal.py FUNCTION NAME:_log() LINE:224] 192.168.0.1 - - [06/May/2022 22:01:00] "%s" %s %s from 192.168.0.1
+[2022-05-06 22:01:00,388] INFO METHOD: GET FILENAME:_internal.py FUNCTION NAME:_log() LINE:224] 192.168.0.1 - - [06/May/2022 22:01:00] "%s" %s %s from 192.168.0.1
+[2022-05-06 22:31:39,351] INFO METHOD: GET FILENAME:_internal.py FUNCTION NAME:_log() LINE:224] 192.168.0.1 - - [06/May/2022 22:31:39] "%s" %s %s from 192.168.0.1
+[2022-05-06 22:31:39,369] INFO METHOD: GET FILENAME:_internal.py FUNCTION NAME:_log() LINE:224] 192.168.0.1 - - [06/May/2022 22:31:39] "%s" %s %s from 192.168.0.1
+[2022-05-06 22:51:20,736] INFO METHOD: GET FILENAME:_internal.py FUNCTION NAME:_log() LINE:224] 192.168.0.1 - - [06/May/2022 22:51:20] "%s" %s %s from 192.168.0.1
+[2022-05-06 22:51:20,751] INFO METHOD: GET FILENAME:_internal.py FUNCTION NAME:_log() LINE:224] 192.168.0.1 - - [06/May/2022 22:51:20] "%s" %s %s from 192.168.0.1
+[2022-05-06 22:53:01,780] INFO METHOD: GET FILENAME:_internal.py FUNCTION NAME:_log() LINE:224] 192.168.0.1 - - [06/May/2022 22:53:01] "%s" %s %s from 192.168.0.1
+[2022-05-06 22:53:01,793] INFO METHOD: GET FILENAME:_internal.py FUNCTION NAME:_log() LINE:224] 192.168.0.1 - - [06/May/2022 22:53:01] "%s" %s %s from 192.168.0.1
+[2022-05-06 22:54:29,897] INFO METHOD: GET FILENAME:_internal.py FUNCTION NAME:_log() LINE:224] 192.168.0.1 - - [06/May/2022 22:54:29] "%s" %s %s from 192.168.0.1
+[2022-05-06 22:54:29,910] INFO METHOD: GET FILENAME:_internal.py FUNCTION NAME:_log() LINE:224] 192.168.0.1 - - [06/May/2022 22:54:29] "%s" %s %s from 192.168.0.1
+[2022-05-06 22:54:31,331] INFO METHOD: GET FILENAME:_internal.py FUNCTION NAME:_log() LINE:224] 192.168.0.1 - - [06/May/2022 22:54:31] "%s" %s %s from 192.168.0.1
+[2022-05-06 22:54:31,342] INFO METHOD: GET FILENAME:_internal.py FUNCTION NAME:_log() LINE:224] 192.168.0.1 - - [06/May/2022 22:54:31] "%s" %s %s from 192.168.0.1
+[2022-05-06 23:03:16,965] INFO METHOD: GET FILENAME:_internal.py FUNCTION NAME:_log() LINE:224] 192.168.0.1 - - [06/May/2022 23:03:16] "%s" %s %s from 192.168.0.1
+[2022-05-06 23:03:16,979] INFO METHOD: GET FILENAME:_internal.py FUNCTION NAME:_log() LINE:224] 192.168.0.1 - - [06/May/2022 23:03:16] "%s" %s %s from 192.168.0.1
