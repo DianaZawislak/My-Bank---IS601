@@ -32,7 +32,7 @@ def songs_browse(page):
 def songs_upload():
     form = csv_upload()
     if form.validate_on_submit():
-        log = logging.getLogger("myApp")
+        #log = logging.getLogger("DianasApp")
 
         filename = secure_filename(form.file.data.filename)
         filepath = os.path.join(current_app.config['UPLOAD_FOLDER'], filename)
@@ -46,8 +46,8 @@ def songs_upload():
 
         current_user.songs = list_of_songs
         db.session.commit()
-        after_request_song_upload()
-        # current_app.logger.info(user.email + " has uploaded " + filename)
+        #after_request_song_upload()
+        #current_app.logger.info(user.email + " has uploaded " + filename)
         return redirect(url_for('songs.songs_browse'))
 
     try:
