@@ -140,6 +140,14 @@ a {
     border-color: #2204cc!important;
 }
 
+/*---.btn {
+    background-image: linear-gradient(#2204cc, #2204cc, grey ) !important;
+    -webkit-filter: none!important;
+    filter: none!important;
+
+
+}---*/
+
 /*-------------------------CARDS-----------------------------------*/
 
 .card-body {
