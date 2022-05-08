@@ -54,7 +54,7 @@ def transactions_upload():
         db.session.commit()
         after_request_transactions_upload()
         current_app.logger.info(user.email + " has uploaded " + filename)
-        return redirect(url_for('transactions.transactions_browse'))
+        return redirect(url_for('auth.dashboard'))
 
     try:
         return render_template('upload.html', form=form)
