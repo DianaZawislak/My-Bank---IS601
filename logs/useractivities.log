@@ -6,3 +6,16 @@
 [2022-05-06 23:15:54,174] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:transactions_upload() LINE:56] dog@dog.com has uploaded trans.csv from 192.168.0.1
 [2022-05-06 23:21:29,566] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:register() LINE:32] New Userlala@lala.comregistered from 192.168.0.1
 [2022-05-06 23:21:36,653] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:register_login() LINE:55] Existing User lala@lala.com Logged In from 192.168.0.1
+[2022-05-07 16:13:13,144] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:login() LINE:97] Existing User dog@dog.com Logged In from 192.168.0.1
+[2022-05-07 16:13:40,976] INFO METHOD: GET FILENAME:__init__.py FUNCTION NAME:browse_users() LINE:28] Browse page loading from 192.168.0.1
+[2022-05-07 16:52:09,127] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:register() LINE:32] New Userdog@dog.comregistered from 192.168.0.1
+[2022-05-07 16:52:19,847] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:transactions_upload() LINE:56] dog@dog.com has uploaded trans.csv from 192.168.0.1
+[2022-05-07 16:54:33,458] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:register() LINE:32] New Userdog@dog.comregistered from 192.168.0.1
+[2022-05-07 16:57:45,113] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:register() LINE:32] New Userdiana@test.comregistered from 192.168.0.1
+[2022-05-07 17:00:02,613] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:register() LINE:32] New Userdiana@test.comregistered from 192.168.0.1
+[2022-05-08 14:53:51,979] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:register() LINE:32] New Userdog@dog.comregistered from 192.168.0.1
+[2022-05-08 14:54:39,290] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:transactions_upload() LINE:56] dog@dog.com has uploaded trans.csv from 192.168.0.1
+[2022-05-08 14:55:15,141] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:register() LINE:32] New Userdiana@test.comregistered from 192.168.0.1
+[2022-05-08 14:55:26,137] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:register_login() LINE:55] Existing User diana@test.com Logged In from 192.168.0.1
+[2022-05-08 14:55:43,052] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:transactions_upload() LINE:56] diana@test.com has uploaded trans.csv from 192.168.0.1
+[2022-05-08 15:03:48,789] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:transactions_upload() LINE:56] diana@test.com has uploaded trans.csv from 192.168.0.1
