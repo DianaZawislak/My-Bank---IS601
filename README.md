@@ -16,6 +16,8 @@
 ![Contributors](https://img.shields.io/github/contributors/DianaZawislak/My-Bank---IS601?style=plastic)
 ![Languages](https://img.shields.io/github/languages/count/DianaZawislak/My-Bank---IS601?style=plastic) 
 ![Docker](https://img.shields.io/docker/automated/dianazawislak/mit-activityMy-Bank---IS601?style=plastic)
+
+![Pytest Results](app/static/images/pytest)
 This is a final project application for Web Development System graduate clas IS-601 at NJIT lead by professor Keith Williams.
 I am using technologies and skills obtained in this and previous classes.
 * Docker
