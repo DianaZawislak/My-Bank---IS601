@@ -4,3 +4,4 @@
 [2022-05-08 14:54:39,289] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:after_request_transactions_upload() LINE:22] dog@dog.com  uploaded new transactions from 192.168.0.1
 [2022-05-08 14:55:43,052] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:after_request_transactions_upload() LINE:22] diana@test.com  uploaded new transactions from 192.168.0.1
 [2022-05-08 15:03:48,789] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:after_request_transactions_upload() LINE:22] diana@test.com  uploaded new transactions from 192.168.0.1
+[2022-05-10 02:28:13,843] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:after_request_transactions_upload() LINE:22] test5@test.com  uploaded new transactions from 192.168.128.1
