@@ -21502,3 +21502,11 @@ WHERE users.id = ? from 192.168.128.1
 FROM transactions 
 WHERE transactions.user_id = ? from 192.168.128.1
 [2022-05-10 04:47:45,587] INFO METHOD: GET FILENAME:base.py FUNCTION NAME:_execute_context() LINE:1777] [%s] %r from 192.168.128.1
+[2022-05-10 04:52:32,492] INFO METHOD: GET FILENAME:base.py FUNCTION NAME:_begin_impl() LINE:953] BEGIN (implicit) from 192.168.128.1
+[2022-05-10 04:52:32,502] INFO METHOD: GET FILENAME:base.py FUNCTION NAME:_execute_context() LINE:1772] SELECT users.is_active AS users_is_active, users.id AS users_id, users.email AS users_email, users.password AS users_password, users.about AS users_about, users.authenticated AS users_authenticated, users.registered_on AS users_registered_on, users.is_admin AS users_is_admin 
+FROM users 
+WHERE users.id = ? from 192.168.128.1
+[2022-05-10 04:52:32,506] INFO METHOD: GET FILENAME:base.py FUNCTION NAME:_execute_context() LINE:1777] [%s] %r from 192.168.128.1
+[2022-05-10 04:52:32,541] INFO METHOD: GET FILENAME:base.py FUNCTION NAME:_execute_context() LINE:1772] UPDATE users SET authenticated=? WHERE users.id = ? from 192.168.128.1
+[2022-05-10 04:52:32,554] INFO METHOD: GET FILENAME:base.py FUNCTION NAME:_execute_context() LINE:1777] [%s] %r from 192.168.128.1
+[2022-05-10 04:52:32,596] INFO METHOD: GET FILENAME:base.py FUNCTION NAME:_commit_impl() LINE:1013] COMMIT from 192.168.128.1
