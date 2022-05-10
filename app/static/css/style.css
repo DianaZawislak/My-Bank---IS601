@@ -10,7 +10,6 @@ font-size: 100%;
 
 }
 
-
 /*------------------------------ Navbar Custom -------------------------------*/
 .navbar-default {
     background-image: linear-gradient(#585858, #909090); !important;
@@ -104,40 +103,47 @@ a {
 }
 
 
-/*----------------------BUTTONS------------------------------*/
+/*----------------------BUTTONS and progress bar------------------------------*/
 
 .btn-primary:hover {
-    background-image: linear-gradient(grey, grey, #2204cc)!important;
+    background-image: linear-gradient(dodgerblue, dodgerblue, #1338BE)!important;
     -webkit-filter: none!important;
     filter: none!important;
-    border: 1px solid grey!important;
+    color: #585858 !important;
+    /*--border: 1px solid grey!important;--*/
 }
 
 .btn-primary {
-    background-image: linear-gradient(#2204cc, #2204cc, grey ) !important;
+    background-image: linear-gradient(#1338BE, #1338BE, dodgerblue ) !important;
     -webkit-filter: none!important;
     filter: none!important;
-    border: 1px solid #2204cc!important;
+    /*border: 1px solid #1c1cf0!important;*/
+    color: #B0B0B0 !important;
 }
 
 .btn-info {
     color: #000;
-    background-color: #2204cc !important;
-    border-color: #2204cc!important;
+    background-color: ##1338BE !important;
+
 }
 
-/*---.btn {
+/*--.btn {
     background-image: linear-gradient(#2204cc, #2204cc, grey ) !important;
     -webkit-filter: none!important;
     filter: none!important;
+    }
+    */
 
 
-}---*/
+.progress-bar-stripped {
+    background-image: linear-gradient(45deg, rgb(28, 28, 240) 100%,  rgb(28, 28, 240) 50% !important;
+    background-size: 1rem 1rem !important;
+}
 
 /*-------------------------CARDS-----------------------------------*/
 
-.card-body {
-    background-image: linear-gradient(to bottom right, #808080, #f2f3f4) !important;
+.card-body  {
+    background-image: linear-gradient(to bottom, #9c9c9c,#f2f3f4);
 }
 
 .carousel-item> img {
