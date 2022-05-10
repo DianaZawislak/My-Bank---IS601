@@ -42,3 +42,4 @@
 [2022-05-10 02:45:26,091] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:register() LINE:32] New Userdianaregistered from 127.0.0.1
 [2022-05-10 02:46:25,209] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:register() LINE:32] New Userdianaregistered from 127.0.0.1
 [2022-05-10 03:00:41,928] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:register() LINE:32] New Userdiana@test.comregistered from 127.0.0.1
+[2022-05-10 03:19:12,467] INFO METHOD: POST FILENAME:__init__.py FUNCTION NAME:register() LINE:32] New Userdiana@test.comregistered from 127.0.0.1
