@@ -6,15 +6,13 @@
     <div id="row">
     <h3>Welcome: {{ current_user.email }}</h3>
 
-
-
-
+    </div>
 
 <div class="row">
  <div class ="col-8">
-      <h4><a href="{{ url_for("transactions.transactions_upload") }}" class="btn col-3 mt-2 mb-2 btn-info" role="button">Upload
+      <h4><a href="{{ url_for("transactions.transactions_upload") }}" class="btn col-4 mt-2 mb-2 btn-info" role="button">Upload
                 Transactions</a></h4>
-     <h4>Your Current Account Balance is: {{ user_balance }} </h4>
+     <h4 class="mb-3 text-primary">Your Current Account Balance is: {{ user_balance }} </h4>
         {{ render_table(data) }}
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -28,6 +26,9 @@
         <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
  </div>
 <div class="col-4">
+        <h5 class="text-center">BANK'S CURRENT BALANCE</h5>
+    <h5 class="text-center">{{account_balance()}}</h5>
+    <p class="fst-italic">(this balance is visible for non-admin users ONLY for grading purposes)</p>
     <img src="{{ url_for('static', filename='images/bank7.png') }}" class="img-fluid" alt="docker1">
 </div>
         <script type=text/javascript>
@@ -46,5 +47,3 @@
 
 
     {% endblock %}
-</div>
-</div>
