@@ -2,7 +2,7 @@ from flask import Blueprint, render_template, abort, redirect, url_for, flash,cu
 from flask_login import login_user
 from jinja2 import TemplateNotFound
 from flask_login import current_user
-from ..auth.forms import login_form, register_form, profile_form, security_form, user_edit_form
+from ..auth.forms import login_form
 from ..db import db
 from ..db.models import User
 
