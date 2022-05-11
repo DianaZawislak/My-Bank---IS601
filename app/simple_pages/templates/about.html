@@ -5,10 +5,12 @@
 
     <div class="container-fluid py-3">
         <div class="row align-items stretch">
-            <div class="col-7">
-                <p class="fs-6"><span class="fs-3">T</span>his website was created to present skills and technology
-                    learned in Web Sysytems Development class, IS601 at New Jersey Institute of Tehnology.
+            <div class="col-6">
+                <h5> Short Overview Of This Project</h5>
+                <p class="fs-6">This website was created to present skills and technology
+                    learned in Web Sytems Development class, IS601 at New Jersey Institute of Technology.
                     Author of this page is Diana Zawislak, student of Computer Science Master Certificate.
+                  <br>
                     Technologies used for this project are:
                 <ul>
                     <li>GitHub and Git
@@ -22,7 +24,27 @@
                     <li>Heroku
                     </li>
                 </ul>
-                <span class="fs-3">R</span>esources used:
+                <p class="fs-6">This project demonstrates ability to use WTForms, Bootstrap
+                    Libraries and build various python tests to test functionality of application.
+                    <br>
+                    Project contains all requirements of Project 4 as well as features presented in project 2 such as
+                    ability to add csv files of songs and locations that allows user to view a map of.</p>
+                <br>
+                <h5> Below are links to Project 2 and Project 3 and this Project</h5>
+                    <p class="fs-6 italics"> (links to deployment are listed in
+                        read me file of each repository)</p>
+                <ul>
+                    <li><a href=https://github.com/DianaZawislak/Docker_Git_Github_Info_Website" target="_blank">Project
+                        2</a>
+                    </li>
+                    <li><a href="https://github.com/DianaZawislak/IS601-Project-3" target="_blank">Project 3</a>
+                    </li>
+                    <li><a href="https://github.com/DianaZawislak/My-Bank---IS601" target="_blank">Project 4</a>
+                    </li>
+                </ul>
+
+<br>
+                <h5>Resources used:</h5>
                 <ul>
                     <li>www.docker.com
                     </li>
@@ -35,15 +57,24 @@
                     <li>www.martinfowler.com</li>
                 </ul>
             </div>
-            <div class="col-5">
+            <div class="col-1"></div>
+            <div class="col-5 align-content-center">
                 <img src="{{ url_for('static', filename='images/me.png') }}"
                      class="img-fluid"
                      alt="me">
-            </div>
 
-            <div class="container">
-                <p> Please contact me at diana.zawislak@icloud.com with any questions or concerns
+                <h4 class="mt-4 mb-3 text-center">Connect with me:</h4>
+                <!-- Github -->
+                <p class="text-center">
+                    <a class="mt-4 px-3" href="https://github.com/DianaZawislak" target="_blank"><img
+                            src="{{ url_for('static', filename='images/github.svg') }}"></a>
+                    <a class="mt-4 px-3" href="https://www.linkedin.com/in/dianazawislak1980/" target="_blank"><img
+                            src="{{ url_for('static', filename='images/linkedin.svg') }}"></a>
+                    <a class="mt-4 px-3" href="https://www.dianasworkspaceworld.slack.com" target="_blank"><img
+                            src="{{ url_for('static', filename='images/slack.svg') }}"></a>
                 </p>
             </div>
+
+
 
 {% endblock %}

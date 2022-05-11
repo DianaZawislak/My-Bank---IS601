@@ -157,3 +157,7 @@ a {
     width: 50% !important;
 }
 
+.svg:hover {
+    color: blue !important;
+}
+
